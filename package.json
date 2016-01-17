@@ -1,6 +1,6 @@
 {
   "name": "retext-profanities",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Check for profane and vulgar wording with retext",
   "license": "MIT",
   "keywords": [
