@@ -23,7 +23,7 @@ var profanities = require('./');
  */
 
 test('profanities', function (t) {
-    t.plan(4);
+    t.plan(6);
 
     retext()
         .use(profanities)
@@ -54,6 +54,22 @@ test('profanities', function (t) {
                 file.messages.map(String),
                 [],
                 'should not warn for `ignore`d phrases'
+            );
+        });
+
+    retext()
+        .use(profanities)
+        .process([
+            'When he’ll freeze over, hell freezes over.'
+        ].join('\n'), function (err, file) {
+            t.ifError(err, 'should not fail (#3)');
+
+            t.deepEqual(
+                file.messages.map(String),
+                [
+                    '1:25-1:29: Don’t use “hell”, it’s profane'
+                ],
+                'should correctly depend on apostrophes'
             );
         });
 });

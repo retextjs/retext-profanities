@@ -15,6 +15,7 @@
   "repository": "wooorm/retext-profanities",
   "dependencies": {
     "sindresorhus/array-differ": "^1.0.0",
+    "jonschlinkert/array-intersection": "^0.1.2",
     "wooorm/nlcst-to-string": "^1.1.0",
     "wooorm/nlcst-search": "^1.0.0",
     "wooorm/profanities": "^1.0.0",
