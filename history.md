@@ -2,6 +2,11 @@
 
 <!--lint disable no-multiple-toplevel-headings -->
 
+2.0.0 / 2016-05-18
+==================
+
+*   Add more nuance to messages ([`5f63af6`](https://github.com/wooorm/retext-profanities/commit/5f63af6))
+
 1.1.0 / 2016-02-04
 ==================
 
