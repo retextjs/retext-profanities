@@ -21,6 +21,9 @@
   },
   "bugs": "https://github.com/wooorm/retext-profanities/issues",
   "author": "Titus Wormer <tituswormer@gmail.com> (http://wooorm.com)",
+  "contributors": [
+    "Titus Wormer <tituswormer@gmail.com> (http://wooorm.com)"
+  ],
   "dependencies": {
     "array-differ": "^1.0.0",
     "array-intersection": "^0.1.2",
