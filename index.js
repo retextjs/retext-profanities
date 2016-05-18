@@ -14,18 +14,39 @@
  * Dependencies.
  */
 
+var keys = require('object-keys');
 var difference = require('array-differ');
 var intersection = require('array-intersection');
 var nlcstToString = require('nlcst-to-string');
 var quotation = require('quotation');
 var search = require('nlcst-search');
-var profanities = require('profanities');
+var cuss = require('cuss');
 
 /*
  * List of values not to normalize.
  */
 
 var APOSTROPHES = ['hell'];
+
+/*
+ * Map of `cuss` ratings to suffixes.
+ */
+
+var PREFIX = [
+    'Be careful with',
+    'Reconsider using',
+    'Don’t use'
+];
+
+/*
+ * Map of `cuss` ratings to suffixes.
+ */
+
+var SUFFIX = [
+    'it’s profane in some cases',
+    'it may be profane',
+    'it’s profane'
+];
 
 /**
  * Attacher.
@@ -40,7 +61,7 @@ var APOSTROPHES = ['hell'];
  */
 function attacher(processor, options) {
     var ignore = (options || {}).ignore || [];
-    var phrases = difference(profanities, ignore);
+    var phrases = difference(keys(cuss), ignore);
     var apostrophes = difference(phrases, APOSTROPHES);
     var noApostrophes = intersection(APOSTROPHES, phrases);
 
@@ -60,10 +81,12 @@ function attacher(processor, options) {
          * @param {string} phrase - Matched value.
          */
         function handle(match, position, parent, phrase) {
+            var rating = cuss[phrase];
+
             var message = file.warn([
-                'Don’t use',
+                PREFIX[rating],
                 quotation(nlcstToString(match), '“', '”') + ',',
-                'it’s profane'
+                SUFFIX[rating]
             ].join(' '), {
                 'start': match[0].position.start,
                 'end': match[match.length - 1].position.end

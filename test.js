@@ -28,14 +28,19 @@ test('profanities', function (t) {
     retext()
         .use(profanities)
         .process([
-            'He’s pretty set on beating your butt for sheriff.'
+            'He’s pretty set on beating your butt for sheriff.',
+            'What an asshat.',
+            'The kidnapper was the mother, an addict.'
         ].join('\n'), function (err, file) {
             t.ifError(err, 'should not fail (#1)');
 
             t.deepEqual(
                 file.messages.map(String),
                 [
-                    '1:33-1:37: Don’t use “butt”, it’s profane'
+                    '1:33-1:37: Be careful with “butt”, it’s profane ' +
+                        'in some cases',
+                    '2:9-2:15: Don’t use “asshat”, it’s profane',
+                    '3:34-3:40: Reconsider using “addict”, it may be profane'
                 ],
                 'should warn about profanities'
             );
@@ -67,7 +72,8 @@ test('profanities', function (t) {
             t.deepEqual(
                 file.messages.map(String),
                 [
-                    '1:25-1:29: Don’t use “hell”, it’s profane'
+                    '1:25-1:29: Be careful with “hell”, it’s profane ' +
+                        'in some cases'
                 ],
                 'should correctly depend on apostrophes'
             );

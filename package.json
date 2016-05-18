@@ -24,9 +24,10 @@
   "dependencies": {
     "array-differ": "^1.0.0",
     "array-intersection": "^0.1.2",
+    "cuss": "^1.1.0",
     "nlcst-search": "^1.0.0",
     "nlcst-to-string": "^1.1.0",
-    "profanities": "^1.0.0",
+    "object-keys": "^1.0.9",
     "quotation": "^1.0.0"
   },
   "devDependencies": {
