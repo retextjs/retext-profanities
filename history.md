@@ -2,6 +2,11 @@
 
 <!--lint disable no-multiple-toplevel-headings -->
 
+2.1.0 / 2016-06-08
+==================
+
+*   Add `profanitySeverity` to exposed messages ([`646329f`](https://github.com/wooorm/retext-profanities/commit/646329f))
+
 2.0.0 / 2016-05-18
 ==================
 
