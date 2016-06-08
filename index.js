@@ -93,6 +93,7 @@ function attacher(processor, options) {
             });
 
             message.ruleId = phrase;
+            message.profanitySeverity = rating;
             message.source = 'retext-profanities';
         }
 
