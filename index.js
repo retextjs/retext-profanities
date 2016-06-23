@@ -2,18 +2,15 @@
  * @author Titus Wormer
  * @copyright 2016 Titus Wormer
  * @license MIT
- * @module retext:profanities
- * @fileoverview Check for profane and vulgar wording with retext.
+ * @module retext:simplify
+ * @fileoverview Check phrases for simpler alternatives.
  */
 
 'use strict';
 
 /* eslint-env commonjs */
 
-/*
- * Dependencies.
- */
-
+/* Dependencies. */
 var keys = require('object-keys');
 var difference = require('array-differ');
 var intersection = require('array-intersection');
@@ -22,26 +19,17 @@ var quotation = require('quotation');
 var search = require('nlcst-search');
 var cuss = require('cuss');
 
-/*
- * List of values not to normalize.
- */
-
+/* List of values not to normalize. */
 var APOSTROPHES = ['hell'];
 
-/*
- * Map of `cuss` ratings to suffixes.
- */
-
+/* Map of `cuss` ratings to prefixes. */
 var PREFIX = [
     'Be careful with',
     'Reconsider using',
     'Don’t use'
 ];
 
-/*
- * Map of `cuss` ratings to suffixes.
- */
-
+/* Map of `cuss` ratings to suffixes. */
 var SUFFIX = [
     'it’s profane in some cases',
     'it may be profane',
@@ -51,7 +39,7 @@ var SUFFIX = [
 /**
  * Attacher.
  *
- * @param {Retext} processor
+ * @param {Unified} processor
  *   - Instance.
  * @param {Object?} [options]
  *   - Configuration.
@@ -88,8 +76,8 @@ function attacher(processor, options) {
                 quotation(nlcstToString(match), '“', '”') + ',',
                 SUFFIX[rating]
             ].join(' '), {
-                'start': match[0].position.start,
-                'end': match[match.length - 1].position.end
+                start: match[0].position.start,
+                end: match[match.length - 1].position.end
             });
 
             message.ruleId = phrase;
@@ -104,8 +92,5 @@ function attacher(processor, options) {
     return transformer;
 }
 
-/*
- * Expose.
- */
-
+/* Expose. */
 module.exports = attacher;

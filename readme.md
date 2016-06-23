@@ -1,7 +1,9 @@
 # retext-profanities [![Build Status][travis-badge]][travis] [![Coverage Status][codecov-badge]][codecov]
 
+<!--lint disable heading-increment list-item-spacing-->
+
 Check for [profane and vulgar][profanities] wording with
-[**retext**][retext].
+[**retext**][retext].  Uses [cuss][] for sureness.
 
 ## Installation
 
@@ -11,8 +13,8 @@ Check for [profane and vulgar][profanities] wording with
 npm install retext-profanities
 ```
 
-**retext-profanities** is also available for [duo][duo-install], and as an
-AMD, CommonJS, and globals module, [uncompressed and compressed][releases].
+**retext-profanities** is also available as an AMD, CommonJS, and
+globals module, [uncompressed and compressed][releases].
 
 ## Usage
 
@@ -41,18 +43,13 @@ Yields:
 
 ## API
 
-### `retext.use(profanities[, options])`
+### `retext().use(profanities[, options])`
 
-Check for [profane and vulgar][profanities] wording.
+Check phrases for simpler alternatives.
 
-**Parameters**
+###### `options`
 
-*   `profanities` — This plug-in;
-
-*   `options` (`Object?`, optional):
-
-    *   `ignore` (`Array.<string>`)
-        — List of phrases to _not_ warn about.
+*   `ignore` (`Array.<string>`) — phrases _not_ to warn about.
 
 ## License
 
@@ -70,8 +67,6 @@ Check for [profane and vulgar][profanities] wording.
 
 [npm-install]: https://docs.npmjs.com/cli/install
 
-[duo-install]: http://duojs.org/#getting-started
-
 [releases]: https://github.com/wooorm/retext-profanities/releases
 
 [license]: LICENSE
@@ -81,3 +76,5 @@ Check for [profane and vulgar][profanities] wording.
 [retext]: https://github.com/wooorm/retext
 
 [profanities]: https://github.com/wooorm/profanities
+
+[cuss]: https://github.com/wooorm/cuss

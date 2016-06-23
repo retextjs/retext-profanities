@@ -1,6 +1,5 @@
 {
   "excludeFiles": [
-    "components/",
     "coverage/",
     "node_modules/",
     "retext-profanities.js",
@@ -9,6 +8,14 @@
   "preset": "crockford",
   "requireMultipleVarDecl": false,
   "disallowDanglingUnderscores": false,
+  "disallowQuotedKeysInObjects": {
+    "allExcept": [
+      "reserved"
+    ]
+  },
+  "disallowKeywords": [
+    "with"
+  ],
   "maximumLineLength": {
     "value": 79,
     "allExcept": [
@@ -16,10 +23,6 @@
       "urlComments"
     ]
   },
-  "requireQuotedKeysInObjects": true,
-  "disallowKeywords": [
-    "with"
-  ],
   "jsDoc": {
     "checkAnnotations": "jsdoc3",
     "checkParamExistence": true,

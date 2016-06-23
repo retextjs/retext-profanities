@@ -29,7 +29,7 @@
     "array-intersection": "^0.1.2",
     "cuss": "^1.1.0",
     "nlcst-search": "^1.0.0",
-    "nlcst-to-string": "^1.1.0",
+    "nlcst-to-string": "^2.0.0",
     "object-keys": "^1.0.9",
     "quotation": "^1.0.0"
   },
@@ -40,14 +40,13 @@
     "istanbul": "^0.4.0",
     "jscs": "^3.0.0",
     "jscs-jsdoc": "^2.0.0",
-    "remark": "^4.0.0",
-    "remark-comment-config": "^3.0.0",
-    "remark-github": "^4.0.1",
+    "remark-cli": "^1.0.0",
+    "remark-comment-config": "^4.0.0",
+    "remark-github": "^5.0.0",
     "remark-lint": "^4.0.0",
-    "remark-validate-links": "^3.0.0",
-    "retext": "^2.0.0",
-    "tape": "^4.0.0",
-    "vfile-reporter": "^1.5.0"
+    "remark-validate-links": "^4.0.0",
+    "retext": "^3.0.0",
+    "tape": "^4.0.0"
   },
   "scripts": {
     "build-md": "remark . --quiet --frail",

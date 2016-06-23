@@ -9,19 +9,15 @@
 'use strict';
 
 /* eslint-env node */
+/* jscs:disable jsDoc */
+/* jscs:disable maximumLineLength */
 
-/*
- * Dependencies.
- */
-
+/* Dependencies. */
 var test = require('tape');
 var retext = require('retext');
 var profanities = require('./');
 
-/*
- * Tests.
- */
-
+/* Tests. */
 test('profanities', function (t) {
     t.plan(6);
 
@@ -48,7 +44,7 @@ test('profanities', function (t) {
 
     retext()
         .use(profanities, {
-            'ignore': ['butt']
+            ignore: ['butt']
         })
         .process([
             'He’s pretty set on beating your butt for sheriff.'
