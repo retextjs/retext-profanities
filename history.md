@@ -2,6 +2,11 @@
 
 <!--lint disable no-multiple-toplevel-headings-->
 
+3.0.0 / 2016-06-23
+==================
+
+*   Remove support for Duo ([`f5dc274`](https://github.com/wooorm/retext-profanities/commit/f5dc274))
+
 2.1.0 / 2016-06-08
 ==================
 
