@@ -2,13 +2,11 @@
  * @author Titus Wormer
  * @copyright 2016 Titus Wormer
  * @license MIT
- * @module retext:simplify
- * @fileoverview Check phrases for simpler alternatives.
+ * @module retext:profanities
+ * @fileoverview Check for profanities.
  */
 
 'use strict';
-
-/* eslint-env commonjs */
 
 /* Dependencies. */
 var keys = require('object-keys');
@@ -19,78 +17,56 @@ var quotation = require('quotation');
 var search = require('nlcst-search');
 var cuss = require('cuss');
 
+/* Expose. */
+module.exports = attacher;
+
 /* List of values not to normalize. */
 var APOSTROPHES = ['hell'];
 
 /* Map of `cuss` ratings to prefixes. */
 var PREFIX = [
-    'Be careful with',
-    'Reconsider using',
-    'Don’t use'
+  'Be careful with',
+  'Reconsider using',
+  'Don’t use'
 ];
 
 /* Map of `cuss` ratings to suffixes. */
 var SUFFIX = [
-    'it’s profane in some cases',
-    'it may be profane',
-    'it’s profane'
+  'it’s profane in some cases',
+  'it may be profane',
+  'it’s profane'
 ];
 
-/**
- * Attacher.
- *
- * @param {Unified} processor
- *   - Instance.
- * @param {Object?} [options]
- *   - Configuration.
- * @param {Array.<string>?} [options.ignore]
- *   - List of phrases to _not_ warn about.
- * @return {Function} - `transformer`.
- */
+/* Attacher. */
 function attacher(processor, options) {
-    var ignore = (options || {}).ignore || [];
-    var phrases = difference(keys(cuss), ignore);
-    var apostrophes = difference(phrases, APOSTROPHES);
-    var noApostrophes = intersection(APOSTROPHES, phrases);
+  var ignore = (options || {}).ignore || [];
+  var phrases = difference(keys(cuss), ignore);
+  var apostrophes = difference(phrases, APOSTROPHES);
+  var noApostrophes = intersection(APOSTROPHES, phrases);
 
-    /**
-     * Search `tree` for validations.
-     *
-     * @param {Node} tree - NLCST node.
-     * @param {VFile} file - Virtual file.
-     */
-    function transformer(tree, file) {
-        /**
-         * Handle a match.
-         *
-         * @param {Array.<Node>} match - Matched nodes.
-         * @param {Position} position - Location.
-         * @param {Node} parent - Parent of `match`.
-         * @param {string} phrase - Matched value.
-         */
-        function handle(match, position, parent, phrase) {
-            var rating = cuss[phrase];
+  return transformer;
 
-            var message = file.warn([
-                PREFIX[rating],
-                quotation(nlcstToString(match), '“', '”') + ',',
-                SUFFIX[rating]
-            ].join(' '), {
-                start: match[0].position.start,
-                end: match[match.length - 1].position.end
-            });
+  /* Search for violations. */
+  function transformer(tree, file) {
+    search(tree, apostrophes, handle);
+    search(tree, noApostrophes, handle, true);
 
-            message.ruleId = phrase;
-            message.profanitySeverity = rating;
-            message.source = 'retext-profanities';
-        }
+    /* Handle a match. */
+    function handle(match, position, parent, phrase) {
+      var rating = cuss[phrase];
 
-        search(tree, apostrophes, handle);
-        search(tree, noApostrophes, handle, true);
+      var message = file.warn([
+        PREFIX[rating],
+        quotation(nlcstToString(match), '“', '”') + ',',
+        SUFFIX[rating]
+      ].join(' '), {
+        start: match[0].position.start,
+        end: match[match.length - 1].position.end
+      });
+
+      message.ruleId = phrase;
+      message.profanitySeverity = rating;
+      message.source = 'retext-profanities';
     }
-
-    return transformer;
+  }
 }
-
-/* Expose. */
-module.exports = attacher;

@@ -1,13 +1,11 @@
 # retext-profanities [![Build Status][travis-badge]][travis] [![Coverage Status][codecov-badge]][codecov]
 
-<!--lint disable heading-increment list-item-spacing-->
-
 Check for [profane and vulgar][profanities] wording with
 [**retext**][retext].  Uses [cuss][] for sureness.
 
 ## Installation
 
-[npm][npm-install]:
+[npm][]:
 
 ```bash
 npm install retext-profanities
@@ -24,28 +22,27 @@ var profanities = require('retext-profanities');
 var report = require('vfile-reporter');
 
 retext()
-    .use(profanities)
-    .process([
-        'He’s pretty set on beating your butt for sheriff.'
-    ].join('\n'), function (err, file) {
-        console.log(report(file));
-    });
+  .use(profanities)
+  .process([
+    'He’s pretty set on beating your butt for sheriff.'
+  ].join('\n'), function (err, file) {
+    console.error(report(err || file));
+  });
 ```
 
 Yields:
 
 ```txt
-<stdin>
-  1:33-1:37: Don’t use “butt”, it’s profane
+  1:33-1:37  warning  Be careful with “butt”, it’s profane in some cases  butt  retext-profanities
 
-⚠ 5 warnings
+⚠ 1 warning
 ```
 
 ## API
 
 ### `retext().use(profanities[, options])`
 
-Check phrases for simpler alternatives.
+Check for profanities.
 
 ###### `options`
 
@@ -65,7 +62,7 @@ Check phrases for simpler alternatives.
 
 [codecov]: https://codecov.io/github/wooorm/retext-profanities
 
-[npm-install]: https://docs.npmjs.com/cli/install
+[npm]: https://docs.npmjs.com/cli/install
 
 [releases]: https://github.com/wooorm/retext-profanities/releases
 
