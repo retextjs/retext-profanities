@@ -48,6 +48,10 @@ Check for profanities.
 
 *   `ignore` (`Array.<string>`) — phrases _not_ to warn about.
 
+## Rules
+
+See [`rules.md`][rules] for a list of rules.
+
 ## License
 
 [MIT][license] © [Titus Wormer][author]
@@ -75,3 +79,5 @@ Check for profanities.
 [profanities]: https://github.com/wooorm/profanities
 
 [cuss]: https://github.com/wooorm/cuss
+
+[rules]: rules.md

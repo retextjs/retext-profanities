@@ -64,7 +64,7 @@ function attacher(processor, options) {
         end: match[match.length - 1].position.end
       });
 
-      message.ruleId = phrase;
+      message.ruleId = phrase.replace(/\W+/g, '-');
       message.profanitySeverity = rating;
       message.source = 'retext-profanities';
     }
