@@ -19,6 +19,7 @@ This document lists all checked phrases.
 | `adult`                           | `adult`                           |
 | `africa`                          | `africa`                          |
 | `african`                         | `african`                         |
+| `africoon`                        | `africoon`                        |
 | `alla`                            | `alla`                            |
 | `allah`                           | `allah`                           |
 | `alligator-bait`                  | `alligator bait`                  |
@@ -100,6 +101,8 @@ This document lists all checked phrases.
 | `bastard`                         | `bastard`                         |
 | `bazongas`                        | `bazongas`                        |
 | `bazooms`                         | `bazooms`                         |
+| `beanbag`                         | `beanbag`                         |
+| `beanbags`                        | `beanbags`                        |
 | `beaner`                          | `beaner`                          |
 | `beaners`                         | `beaners`                         |
 | `beaney`                          | `beaney`                          |
@@ -259,6 +262,8 @@ This document lists all checked phrases.
 | `chinaswede`                      | `chinaswede`                      |
 | `chinaswedes`                     | `chinaswedes`                     |
 | `chinese`                         | `chinese`                         |
+| `chingchong`                      | `chingchong`                      |
+| `chingchongs`                     | `chingchongs`                     |
 | `ching-chong`                     | `ching chong`                     |
 | `ching-chongs`                    | `ching chongs`                    |
 | `chink`                           | `chink`                           |
@@ -418,6 +423,10 @@ This document lists all checked phrases.
 | `deth`                            | `deth`                            |
 | `devil`                           | `devil`                           |
 | `devilworshipper`                 | `devilworshipper`                 |
+| `diaperhead`                      | `diaperhead`                      |
+| `diaperheads`                     | `diaperheads`                     |
+| `diaper-head`                     | `diaper head`                     |
+| `diaper-heads`                    | `diaper heads`                    |
 | `dick`                            | `dick`                            |
 | `dickbrain`                       | `dickbrain`                       |
 | `dickforbrains`                   | `dickforbrains`                   |
@@ -575,6 +584,7 @@ This document lists all checked phrases.
 | `freakfuck`                       | `freakfuck`                       |
 | `freakyfucker`                    | `freakyfucker`                    |
 | `freefuck`                        | `freefuck`                        |
+| `fruitcake`                       | `fruitcake`                       |
 | `fu`                              | `fu`                              |
 | `fubar`                           | `fubar`                           |
 | `fuc`                             | `fuc`                             |
@@ -724,6 +734,10 @@ This document lists all checked phrases.
 | `hajis`                           | `hajis`                           |
 | `hajji`                           | `hajji`                           |
 | `hajjis`                          | `hajjis`                          |
+| `halfbreed`                       | `halfbreed`                       |
+| `half-breed`                      | `half breed`                      |
+| `halfcaste`                       | `halfcaste`                       |
+| `half-caste`                      | `half caste`                      |
 | `hamas`                           | `hamas`                           |
 | `handjob`                         | `handjob`                         |
 | `haole`                           | `haole`                           |
@@ -845,6 +859,7 @@ This document lists all checked phrases.
 | `jesuschrist`                     | `jesuschrist`                     |
 | `jew`                             | `jew`                             |
 | `jewed`                           | `jewed`                           |
+| `jewess`                          | `jewess`                          |
 | `jewish`                          | `jewish`                          |
 | `jig`                             | `jig`                             |
 | `jiga`                            | `jiga`                            |
@@ -1022,6 +1037,7 @@ This document lists all checked phrases.
 | `mexican`                         | `mexican`                         |
 | `mgger`                           | `mgger`                           |
 | `mggor`                           | `mggor`                           |
+| `mick`                            | `mick`                            |
 | `mickeyfinn`                      | `mickeyfinn`                      |
 | `mideast`                         | `mideast`                         |
 | `milf`                            | `milf`                            |
@@ -1084,6 +1100,8 @@ This document lists all checked phrases.
 | `nastywhore`                      | `nastywhore`                      |
 | `nazi`                            | `nazi`                            |
 | `necro`                           | `necro`                           |
+| `negres`                          | `negres`                          |
+| `negress`                         | `negress`                         |
 | `negro`                           | `negro`                           |
 | `negroes`                         | `negroes`                         |
 | `negroid`                         | `negroid`                         |
@@ -1138,6 +1156,7 @@ This document lists all checked phrases.
 | `nigras`                          | `nigras`                          |
 | `nigre`                           | `nigre`                           |
 | `nigres`                          | `nigres`                          |
+| `nigress`                         | `nigress`                         |
 | `nigs`                            | `nigs`                            |
 | `nip`                             | `nip`                             |
 | `nipple`                          | `nipple`                          |
@@ -1166,6 +1185,7 @@ This document lists all checked phrases.
 | `orgies`                          | `orgies`                          |
 | `orgy`                            | `orgy`                            |
 | `osama`                           | `osama`                           |
+| `paddy`                           | `paddy`                           |
 | `paki`                            | `paki`                            |
 | `pakis`                           | `pakis`                           |
 | `palesimian`                      | `palesimian`                      |
@@ -1462,6 +1482,7 @@ This document lists all checked phrases.
 | `skwa`                            | `skwa`                            |
 | `skwe`                            | `skwe`                            |
 | `slant`                           | `slant`                           |
+| `slanty`                          | `slanty`                          |
 | `slanteye`                        | `slanteye`                        |
 | `slapper`                         | `slapper`                         |
 | `slaughter`                       | `slaughter`                       |
@@ -1531,7 +1552,9 @@ This document lists all checked phrases.
 | `spermhearder`                    | `spermhearder`                    |
 | `spermherder`                     | `spermherder`                     |
 | `spic`                            | `spic`                            |
+| `spics`                           | `spics`                           |
 | `spick`                           | `spick`                           |
+| `spicks`                          | `spicks`                          |
 | `spig`                            | `spig`                            |
 | `spigotty`                        | `spigotty`                        |
 | `spik`                            | `spik`                            |
