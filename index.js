@@ -1,14 +1,5 @@
-/**
- * @author Titus Wormer
- * @copyright 2016 Titus Wormer
- * @license MIT
- * @module retext:profanities
- * @fileoverview Check for profanities.
- */
-
 'use strict';
 
-/* Dependencies. */
 var keys = require('object-keys');
 var difference = require('array-differ');
 var intersection = require('array-intersection');
@@ -17,8 +8,7 @@ var quotation = require('quotation');
 var search = require('nlcst-search');
 var cuss = require('cuss');
 
-/* Expose. */
-module.exports = attacher;
+module.exports = profanities;
 
 /* List of values not to normalize. */
 var APOSTROPHES = ['hell'];
@@ -37,8 +27,7 @@ var SUFFIX = [
   'it’s profane'
 ];
 
-/* Attacher. */
-function attacher(processor, options) {
+function profanities(processor, options) {
   var ignore = (options || {}).ignore || [];
   var phrases = difference(keys(cuss), ignore);
   var apostrophes = difference(phrases, APOSTROPHES);

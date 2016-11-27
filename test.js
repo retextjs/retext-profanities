@@ -1,19 +1,9 @@
-/**
- * @author Titus Wormer
- * @copyright 2016 Titus Wormer
- * @license MIT
- * @module retext:profanities
- * @fileoverview Test suite for `retext-profanities`.
- */
-
 'use strict';
 
-/* Dependencies. */
 var test = require('tape');
 var retext = require('retext');
 var profanities = require('./');
 
-/* Tests. */
 test('profanities', function (t) {
   t.plan(6);
 
