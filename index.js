@@ -56,6 +56,8 @@ function profanities(processor, options) {
       message.ruleId = phrase.replace(/\W+/g, '-');
       message.profanitySeverity = rating;
       message.source = 'retext-profanities';
+      message.actual = phrase;
+      message.expected = ['Profanity'];
     }
   }
 }
