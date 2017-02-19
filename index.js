@@ -43,10 +43,11 @@ function profanities(options) {
     /* Handle a match. */
     function handle(match, position, parent, phrase) {
       var rating = cuss[phrase];
+      var value = nlcstToString(match);
 
       var message = file.warn([
         PREFIX[rating],
-        quotation(nlcstToString(match), '“', '”') + ',',
+        quotation(value, '“', '”') + ',',
         SUFFIX[rating]
       ].join(' '), {
         start: match[0].position.start,
@@ -56,6 +57,8 @@ function profanities(options) {
       message.ruleId = phrase.replace(/\W+/g, '-');
       message.profanitySeverity = rating;
       message.source = 'retext-profanities';
+      message.actual = value;
+      message.expected = null;
     }
   }
 }
