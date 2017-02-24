@@ -27,7 +27,7 @@ var SUFFIX = [
   'it’s profane'
 ];
 
-function profanities(processor, options) {
+function profanities(options) {
   var ignore = (options || {}).ignore || [];
   var phrases = difference(keys(cuss), ignore);
   var apostrophes = difference(phrases, APOSTROPHES);

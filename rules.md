@@ -750,6 +750,11 @@ This document lists all checked phrases.
 | `headlights`                      | `headlights`                      |
 | `hebe`                            | `hebe`                            |
 | `hebes`                           | `hebes`                           |
+| `hebephila`                       | `hebephila`                       |
+| `hebephile`                       | `hebephile`                       |
+| `hebephiles`                      | `hebephiles`                      |
+| `hebephilia`                      | `hebephilia`                      |
+| `hebephilic`                      | `hebephilic`                      |
 | `heeb`                            | `heeb`                            |
 | `heebs`                           | `heebs`                           |
 | `hell`                            | `hell`                            |
@@ -1186,6 +1191,9 @@ This document lists all checked phrases.
 | `orgy`                            | `orgy`                            |
 | `osama`                           | `osama`                           |
 | `paddy`                           | `paddy`                           |
+| `paederastic`                     | `paederastic`                     |
+| `paederasts`                      | `paederasts`                      |
+| `paederasty`                      | `paederasty`                      |
 | `paki`                            | `paki`                            |
 | `pakis`                           | `pakis`                           |
 | `palesimian`                      | `palesimian`                      |
@@ -1201,6 +1209,14 @@ This document lists all checked phrases.
 | `peck`                            | `peck`                            |
 | `pecker`                          | `pecker`                          |
 | `peckerwood`                      | `peckerwood`                      |
+| `pederastic`                      | `pederastic`                      |
+| `pederasts`                       | `pederasts`                       |
+| `pederasty`                       | `pederasty`                       |
+| `pedo`                            | `pedo`                            |
+| `pedophile`                       | `pedophile`                       |
+| `pedophiles`                      | `pedophiles`                      |
+| `pedophilia`                      | `pedophilia`                      |
+| `pedophilic`                      | `pedophilic`                      |
 | `pee`                             | `pee`                             |
 | `peehole`                         | `peehole`                         |
 | `peepee`                          | `peepee`                          |
