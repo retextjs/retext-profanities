@@ -40,7 +40,7 @@
     "retext": "^5.0.0",
     "tape": "^4.0.0",
     "unist-builder": "^1.0.2",
-    "xo": "^0.17.0"
+    "xo": "^0.18.0"
   },
   "scripts": {
     "build-md": "remark . -qfo",
@@ -60,6 +60,7 @@
   },
   "xo": {
     "space": true,
+    "esnext": false,
     "ignores": [
       "retext-profanities.js"
     ]
