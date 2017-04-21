@@ -22,7 +22,7 @@
     "index.js"
   ],
   "dependencies": {
-    "array-differ": "^1.0.0",
+    "array-differ": "^2.0.3",
     "array-intersection": "^0.1.2",
     "cuss": "^1.3.0",
     "nlcst-search": "^1.0.0",
