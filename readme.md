@@ -11,9 +11,6 @@ Check for [profane and vulgar][profanities] wording with
 npm install retext-profanities
 ```
 
-**retext-profanities** is also available as an AMD, CommonJS, and
-globals module, [uncompressed and compressed][releases].
-
 ## Usage
 
 ```js
@@ -67,8 +64,6 @@ See [`rules.md`][rules] for a list of rules.
 [codecov]: https://codecov.io/github/wooorm/retext-profanities
 
 [npm]: https://docs.npmjs.com/cli/install
-
-[releases]: https://github.com/wooorm/retext-profanities/releases
 
 [license]: LICENSE
 
