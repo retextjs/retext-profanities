@@ -13,23 +13,35 @@ npm install retext-profanities
 
 ## Usage
 
-```js
-var retext = require('retext');
-var profanities = require('retext-profanities');
-var report = require('vfile-reporter');
+Say we have the following file, `example.txt`:
 
-retext()
+```text
+He’s pretty set on beating your butt for sheriff.
+```
+
+And our script, `example.js`, looks like this:
+
+```javascript
+var vfile = require('to-vfile');
+var report = require('vfile-reporter');
+var unified = require('unified');
+var english = require('retext-english');
+var stringify = require('retext-stringify');
+var profanities = require('retext-profanities');
+
+unified()
+  .use(english)
   .use(profanities)
-  .process([
-    'He’s pretty set on beating your butt for sheriff.'
-  ].join('\n'), function (err, file) {
+  .use(stringify)
+  .process(vfile.readSync('example.txt'), function (err, file) {
     console.error(report(err || file));
   });
 ```
 
-Yields:
+Now, running `node example` yields:
 
-```txt
+```text
+example.txt
   1:33-1:37  warning  Be careful with “butt”, it’s profane in some cases  butt  retext-profanities
 
 ⚠ 1 warning
