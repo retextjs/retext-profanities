@@ -61,6 +61,15 @@ Check for profanities.
 
 See [`rules.md`][rules] for a list of rules.
 
+## Related
+
+*   [`retext-equality`](https://github.com/wooorm/retext-equality)
+    — Check possible insensitive, inconsiderate language
+*   [`retext-passive`](https://github.com/wooorm/retext-passive)
+    — Check passive voice
+*   [`retext-simplify`](https://github.com/wooorm/retext-simplify)
+    — Check phrases for simpler alternatives
+
 ## License
 
 [MIT][license] © [Titus Wormer][author]
