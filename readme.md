@@ -41,9 +41,9 @@ Yields:
 
 Check for profanities.
 
-###### `options`
+###### `options.ignore`
 
-*   `ignore` (`Array.<string>`) — phrases _not_ to warn about.
+`Array.<string>` — phrases _not_ to warn about.
 
 ## Rules
 
