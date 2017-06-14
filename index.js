@@ -7,9 +7,20 @@ var pluralize = require('pluralize');
 var nlcstToString = require('nlcst-to-string');
 var quotation = require('quotation');
 var search = require('nlcst-search');
-var cuss = unpack(require('cuss'));
+var cuss = require('cuss');
+
+/* Misclassified singulars and plurals. */
+var skip = [
+  'dy', /* Singular of `dies`. */
+  'pro', /* Singular of `pros`. */
+  'so', /* Singular of `sos`. */
+  'dice', /* Plural of `die`. */
+  'fus' /* Plural of `fu`. */
+];
 
 module.exports = profanities;
+
+var words = unpack(cuss);
 
 /* List of values not to normalize. */
 var APOSTROPHES = ['hell'];
@@ -30,7 +41,7 @@ var SUFFIX = [
 
 function profanities(options) {
   var ignore = (options || {}).ignore || [];
-  var phrases = difference(keys(cuss), ignore);
+  var phrases = difference(keys(words), ignore);
   var apostrophes = difference(phrases, APOSTROPHES);
   var noApostrophes = intersection(APOSTROPHES, phrases);
 
@@ -43,7 +54,7 @@ function profanities(options) {
 
     /* Handle a match. */
     function handle(match, position, parent, phrase) {
-      var rating = cuss[phrase];
+      var rating = words[phrase];
       var value = nlcstToString(match);
 
       var message = file.warn([
@@ -71,9 +82,15 @@ function unpack(map) {
 
   for (key in map) {
     rating = map[key];
-    result[key] = rating;
-    result[pluralize.singular(key)] = rating;
-    result[pluralize.plural(key)] = rating;
+    add(key, rating);
+    add(pluralize.singular(key), rating);
+    add(pluralize.plural(key), rating);
+  }
+
+  function add(key, value) {
+    if (skip.indexOf(key) === -1) {
+      result[key] = value;
+    }
   }
 
   return result;
