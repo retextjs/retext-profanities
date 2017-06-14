@@ -34,7 +34,7 @@
     "browserify": "^14.0.0",
     "esmangle": "^1.0.0",
     "mdast-util-heading-range": "^2.0.1",
-    "nyc": "^10.0.0",
+    "nyc": "^11.0.0",
     "remark-cli": "^3.0.0",
     "remark-lint-table-pipe-alignment": "^1.0.0",
     "remark-preset-wooorm": "^3.0.0",
@@ -72,7 +72,10 @@
     },
     "plugins": [
       "preset-wooorm",
-      ["remark-lint-table-pipe-alignment", false],
+      [
+        "remark-lint-table-pipe-alignment",
+        false
+      ],
       "./script/build-table"
     ]
   }
