@@ -28,6 +28,7 @@
     "nlcst-search": "^1.0.0",
     "nlcst-to-string": "^2.0.0",
     "object-keys": "^1.0.9",
+    "pluralize": "^5.0.0",
     "quotation": "^1.0.0"
   },
   "devDependencies": {
@@ -62,6 +63,9 @@
   "xo": {
     "space": true,
     "esnext": false,
+    "rules": {
+      "guard-for-in": "off"
+    },
     "ignores": [
       "retext-profanities.js"
     ]

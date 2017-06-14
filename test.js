@@ -5,7 +5,7 @@ var retext = require('retext');
 var profanities = require('./');
 
 test('profanities', function (t) {
-  t.plan(6);
+  t.plan(7);
 
   retext()
     .use(profanities)
@@ -52,6 +52,19 @@ test('profanities', function (t) {
         file.messages.map(String),
         ['1:25-1:29: Be careful with “hell”, it’s profane in some cases'],
         'should correctly depend on apostrophes'
+      );
+    });
+
+  retext()
+    .use(profanities)
+    .process('slave slaves', function (err, file) {
+      t.deepEqual(
+        [err].concat(file.messages.map(String)),
+        [
+          null,
+          '1:1-1:6: Don’t use “slave”, it’s profane',
+          '1:7-1:13: Don’t use “slaves”, it’s profane'
+        ]
       );
     });
 });

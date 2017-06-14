@@ -3,10 +3,11 @@
 var keys = require('object-keys');
 var difference = require('lodash.difference');
 var intersection = require('lodash.intersection');
+var pluralize = require('pluralize');
 var nlcstToString = require('nlcst-to-string');
 var quotation = require('quotation');
 var search = require('nlcst-search');
-var cuss = require('cuss');
+var cuss = unpack(require('cuss'));
 
 module.exports = profanities;
 
@@ -61,4 +62,19 @@ function profanities(options) {
       message.expected = null;
     }
   }
+}
+
+function unpack(map) {
+  var result = {};
+  var key;
+  var rating;
+
+  for (key in map) {
+    rating = map[key];
+    result[key] = rating;
+    result[pluralize.singular(key)] = rating;
+    result[pluralize.plural(key)] = rating;
+  }
+
+  return result;
 }
