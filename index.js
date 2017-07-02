@@ -11,6 +11,7 @@ var cuss = require('cuss');
 
 /* Misclassified singulars and plurals. */
 var skip = [
+  'children',
   'dy', /* Singular of `dies`. */
   'pro', /* Singular of `pros`. */
   'so', /* Singular of `sos`. */
