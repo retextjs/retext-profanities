@@ -150,6 +150,7 @@ This document lists all checked phrases.
 | `bohunk` | `bohunk` |
 | `bollick` | `bollick` |
 | `bollock` | `bollock` |
+| `bollocks` | `bollocks` |
 | `bomb` | `bomb` |
 | `bombers` | `bombers` |
 | `bombing` | `bombing` |
