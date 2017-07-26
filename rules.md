@@ -1247,6 +1247,7 @@ This document lists all checked phrases.
 | `pickaninny` | `pickaninny` |
 | `piefke` | `piefke` |
 | `piefkes` | `piefkes` |
+| `pik` | `pik` |
 | `piker` | `piker` |
 | `pikey` | `pikey` |
 | `piky` | `piky` |
