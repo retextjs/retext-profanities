@@ -92,8 +92,8 @@ See [`rules.md`][rules] for a list of rules.
 
 [retext]: https://github.com/wooorm/retext
 
-[profanities]: https://github.com/wooorm/profanities
+[profanities]: https://github.com/words/profanities
 
-[cuss]: https://github.com/wooorm/cuss
+[cuss]: https://github.com/words/cuss
 
 [rules]: rules.md
