@@ -1,7 +1,7 @@
 language: node_js
 node_js:
 - '4.0'
-- '7.0'
+- '9.0'
 sudo: false
 after_script: bash <(curl -s https://codecov.io/bash)
 deploy:
@@ -11,7 +11,7 @@ deploy:
       secure: SrmjGDU9SpFwJckLQf2PwVPgJZaiUAZoR8t7mIZHcmE1TqtRlTq1w839hlP7XpLuEOlqYlUCppFQv3IZhEUy7gN+o95rE5BciLeajrtI+w6S8du5AzxkaEzMxR3DKTjy6p+sGlZZ+4QH6y1P1QJXIbod9Xw4vpv5KBZslOgicmLLTrI/Q6ConU+w0J5cTKmmLh/afVEHJ3vPq2smYZQnRRomM3IQj4BcpBXmSTa52KqYdSRjzAXPn8JNpO8QCunMISi5gdfTDRZaqZO3J7ihaYe2xh0vQdUaef1bseVTLlFJW7xW/IQmXWPKvV4R5r38vKje5Tqz3FC7mmmRHX7COlnWxgHGytgNgJKuQdHCzaz6u7K2rJm/nAhwLcCplXVPGNbDdXscHo0oMRi8MI4gKmXhpvoxxN4FaNgsKgdFr4gPUvtJ6kdMBsE2gax+KUrlvEQEGDZhK8mRFh3irZtwci9UEc6pkg9/Yu/YMiEG0AfS/JZSFz0syxpSZjWStmTlJ4RSct6sdHKFfcIl61uCxS8Ca2P7RvOZItn449heaWt0XYgBv3/W5xgBV+BUjaCU8f3KXhuZA1doHlC94h8ebDR5OCQg6g6NcukeyxozGr1GrFCdDH4QQwJBgjKju6onQAzbep13RTsQZ7T/AdmnvEkQJRVwEhQEzVrVBg96R18=
     on:
       tags: true
-      node: '4.0'
+      node: '9.0'
   - provider: releases
     skip_cleanup: true
     api_key:
@@ -21,4 +21,4 @@ deploy:
       - "retext-profanities.min.js"
     on:
       tags: true
-      node: '7.0'
+      node: '9.0'
