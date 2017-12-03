@@ -350,6 +350,8 @@ This document lists all checked phrases.
 | `cra5h` | `cra5h` |
 | `crabs` | `crabs` |
 | `crack` | `crack` |
+| `cracka` | `cracka` |
+| `cracker` | `cracker` |
 | `crackpipe` | `crackpipe` |
 | `crackwhore` | `crackwhore` |
 | `crap` | `crap` |
