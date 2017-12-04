@@ -70,6 +70,13 @@ See [`rules.md`][rules] for a list of rules.
 *   [`retext-simplify`](https://github.com/retextjs/retext-simplify)
     — Check phrases for simpler alternatives
 
+## Contribute
+
+See [`contribute.md` in `retextjs/retext`][contribute] for ways to get started.
+
+This organisation has a [Code of Conduct][coc].  By interacting with this
+repository, organisation, or community you agree to abide by its terms.
+
 ## License
 
 [MIT][license] © [Titus Wormer][author]
@@ -97,3 +104,7 @@ See [`rules.md`][rules] for a list of rules.
 [cuss]: https://github.com/words/cuss
 
 [rules]: rules.md
+
+[contribute]: https://github.com/retextjs/retext/blob/master/contributing.md
+
+[coc]: https://github.com/retextjs/retext/blob/master/code-of-conduct.md
