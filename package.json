@@ -11,8 +11,8 @@
     "retext",
     "plugin"
   ],
-  "repository": "https://github.com/wooorm/retext-profanities",
-  "bugs": "https://github.com/wooorm/retext-profanities/issues",
+  "repository": "retextjs/retext-profanities",
+  "bugs": "https://github.com/retextjs/retext-profanities/issues",
   "author": "Titus Wormer <tituswormer@gmail.com> (http://wooorm.com)",
   "contributors": [
     "Titus Wormer <tituswormer@gmail.com> (http://wooorm.com)",

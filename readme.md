@@ -63,11 +63,11 @@ See [`rules.md`][rules] for a list of rules.
 
 ## Related
 
-*   [`retext-equality`](https://github.com/wooorm/retext-equality)
+*   [`retext-equality`](https://github.com/retextjs/retext-equality)
     — Check possible insensitive, inconsiderate language
-*   [`retext-passive`](https://github.com/wooorm/retext-passive)
+*   [`retext-passive`](https://github.com/retextjs/retext-passive)
     — Check passive voice
-*   [`retext-simplify`](https://github.com/wooorm/retext-simplify)
+*   [`retext-simplify`](https://github.com/retextjs/retext-simplify)
     — Check phrases for simpler alternatives
 
 ## License
@@ -76,13 +76,13 @@ See [`rules.md`][rules] for a list of rules.
 
 <!-- Definitions -->
 
-[travis-badge]: https://img.shields.io/travis/wooorm/retext-profanities.svg
+[travis-badge]: https://img.shields.io/travis/retextjs/retext-profanities.svg
 
-[travis]: https://travis-ci.org/wooorm/retext-profanities
+[travis]: https://travis-ci.org/retextjs/retext-profanities
 
-[codecov-badge]: https://img.shields.io/codecov/c/github/wooorm/retext-profanities.svg
+[codecov-badge]: https://img.shields.io/codecov/c/github/retextjs/retext-profanities.svg
 
-[codecov]: https://codecov.io/github/wooorm/retext-profanities
+[codecov]: https://codecov.io/github/retextjs/retext-profanities
 
 [npm]: https://docs.npmjs.com/cli/install
 
@@ -90,7 +90,7 @@ See [`rules.md`][rules] for a list of rules.
 
 [author]: http://wooorm.com
 
-[retext]: https://github.com/wooorm/retext
+[retext]: https://github.com/retextjs/retext
 
 [profanities]: https://github.com/words/profanities
 
