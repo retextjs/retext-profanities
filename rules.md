@@ -271,6 +271,7 @@ This document lists all checked phrases.
 | `chinks` | `chinks` |
 | `chinky` | `chinky` |
 | `choad` | `choad` |
+| `chokeonmydick` | `chokeonmydick` |
 | `chode` | `chode` |
 | `chonkies` | `chonkies` |
 | `chonky` | `chonky` |
@@ -369,6 +370,7 @@ This document lists all checked phrases.
 | `crotchmonkey` | `crotchmonkey` |
 | `crotchrot` | `crotchrot` |
 | `cum` | `cum` |
+| `cumgun` | `cumgun` |
 | `cumbubble` | `cumbubble` |
 | `cumfest` | `cumfest` |
 | `cumjockey` | `cumjockey` |
@@ -447,6 +449,7 @@ This document lists all checked phrases.
 | `dike` | `dike` |
 | `dildo` | `dildo` |
 | `dingleberry` | `dingleberry` |
+| `dingdong` | `dingdong` |
 | `dink` | `dink` |
 | `dinks` | `dinks` |
 | `dipshit` | `dipshit` |
@@ -650,6 +653,7 @@ This document lists all checked phrases.
 | `genital` | `genital` |
 | `german` | `german` |
 | `getiton` | `getiton` |
+| `gilf` | `gilf` |
 | `gin` | `gin` |
 | `ginzo` | `ginzo` |
 | `ginzos` | `ginzos` |
@@ -944,6 +948,7 @@ This document lists all checked phrases.
 | `krappy` | `krappy` |
 | `kraut` | `kraut` |
 | `krauts` | `krauts` |
+| `kurwa` | `kurwa` |
 | `kuffar` | `kuffar` |
 | `kum` | `kum` |
 | `kumbubble` | `kumbubble` |
@@ -1042,6 +1047,7 @@ This document lists all checked phrases.
 | `meatbeatter` | `meatbeatter` |
 | `meatrack` | `meatrack` |
 | `meth` | `meth` |
+| `methhead` | `methhead` |
 | `mexican` | `mexican` |
 | `mgger` | `mgger` |
 | `mggor` | `mggor` |
@@ -1481,6 +1487,7 @@ This document lists all checked phrases.
 | `shooting` | `shooting` |
 | `shortfuck` | `shortfuck` |
 | `showtime` | `showtime` |
+| `shutthefuckup` | `shutthefuckup` |
 | `shylock` | `shylock` |
 | `shylocks` | `shylocks` |
 | `sick` | `sick` |
@@ -1606,6 +1613,7 @@ This document lists all checked phrases.
 | `sucker` | `sucker` |
 | `suckme` | `suckme` |
 | `suckmyass` | `suckmyass` |
+| `suckmyballs` | `suckmyballs` |
 | `suckmydick` | `suckmydick` |
 | `suckmytit` | `suckmytit` |
 | `suckoff` | `suckoff` |
