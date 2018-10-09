@@ -370,6 +370,7 @@ This document lists all checked phrases.
 | `crotchmonkey` | `crotchmonkey` |
 | `crotchrot` | `crotchrot` |
 | `cum` | `cum` |
+| `cumgun` | `cumgun` |
 | `cumbubble` | `cumbubble` |
 | `cumfest` | `cumfest` |
 | `cumjockey` | `cumjockey` |
@@ -448,6 +449,7 @@ This document lists all checked phrases.
 | `dike` | `dike` |
 | `dildo` | `dildo` |
 | `dingleberry` | `dingleberry` |
+| `dingdong` | `dingdong` |
 | `dink` | `dink` |
 | `dinks` | `dinks` |
 | `dipshit` | `dipshit` |
