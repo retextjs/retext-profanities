@@ -1,21 +1,21 @@
-"use strict";
+'use strict';
 
-var keys = require("object-keys");
-var difference = require("lodash.difference");
-var intersection = require("lodash.intersection");
-var pluralize = require("pluralize");
-var nlcstToString = require("nlcst-to-string");
-var quotation = require("quotation");
-var search = require("nlcst-search");
-var cuss = require("cuss");
+var keys = require('object-keys');
+var difference = require('lodash.difference');
+var intersection = require('lodash.intersection');
+var pluralize = require('pluralize');
+var nlcstToString = require('nlcst-to-string');
+var quotation = require('quotation');
+var search = require('nlcst-search');
+var cuss = require('cuss');
 
 /* Plurais e singulares mal classificados */
 var skip = [
-  "têm" /* Plural de `tem`. */,
-  "lápis" /* Plural e Singular de `lápis`. */,
-  "atlas" /* Plural e Singular de `atlas`. */,
-  "pires" /* Plural e Singular de `pires`. */,
-  "vírus" /* Plural e Singular de `vírus`. */
+  'têm' /* Plural de `tem`. */,
+  'lápis' /* Plural e Singular de `lápis`. */,
+  'atlas' /* Plural e Singular de `atlas`. */,
+  'pires' /* Plural e Singular de `pires`. */,
+  'vírus' /* Plural e Singular de `vírus`. */
 ];
 
 module.exports = profanities;
@@ -23,16 +23,16 @@ module.exports = profanities;
 var words = unpack(cuss);
 
 /* List of values not to normalize. */
-var APOSTROPHES = ["hell"];
+var APOSTROPHES = ['hell'];
 
 /* Mapa de classificações `cuss` para prefixos. */
-var PREFIX = ["Tenha cuidado com", "Reconsidere usar", "Don’t use"];
+var PREFIX = ['Tenha cuidado com', 'Reconsidere usar', 'Don’t use'];
 
 /* Mapa de classificações `cuss` para sufixos. */
 var SUFFIX = [
-  "isto é profano em alguns casos",
-  "isto pode ser profano",
-  "isto é profano"
+  'isto é profano em alguns casos',
+  'isto pode ser profano',
+  'isto é profano'
 ];
 
 function profanities(options) {
@@ -54,8 +54,8 @@ function profanities(options) {
       var value = nlcstToString(match);
 
       var message = file.warn(
-        [PREFIX[rating], quotation(value, "“", "”") + ",", SUFFIX[rating]].join(
-          " "
+        [PREFIX[rating], quotation(value, '“', '”') + ',', SUFFIX[rating]].join(
+          ' '
         ),
         {
           start: match[0].position.start,
@@ -63,9 +63,9 @@ function profanities(options) {
         }
       );
 
-      message.ruleId = phrase.replace(/\W+/g, "-");
+      message.ruleId = phrase.replace(/\W+/g, '-');
       message.profanitySeverity = rating;
-      message.source = "retext-profanities";
+      message.source = 'retext-profanities';
       message.actual = value;
       message.expected = null;
     }
