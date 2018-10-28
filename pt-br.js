@@ -7,15 +7,15 @@ var pluralize = require('pluralize');
 var nlcstToString = require('nlcst-to-string');
 var quotation = require('quotation');
 var search = require('nlcst-search');
-var cuss = require('cuss');
+var cuss = require('cuss/pt-br');
 
-/* Plurais e singulares mal classificados */
+/* Misclassified singulars and plurals. */
 var skip = [
   'têm' /* Plural de `tem`. */,
-  'lápis' /* Plural e Singular de `lápis`. */,
-  'atlas' /* Plural e Singular de `atlas`. */,
-  'pires' /* Plural e Singular de `pires`. */,
-  'vírus' /* Plural e Singular de `vírus`. */
+  'lápis' /* Plural and Singular of `lápis`. */,
+  'atlas' /* Plural and Singular of `atlas`. */,
+  'pires' /* Plural and Singular of `pires`. */,
+  'vírus' /* Plural and Singular of `vírus`. */
 ];
 
 module.exports = profanities;
@@ -23,12 +23,12 @@ module.exports = profanities;
 var words = unpack(cuss);
 
 /* List of values not to normalize. */
-var APOSTROPHES = ['hell'];
+var APOSTROPHES = []; // This is not necessary in pt-br so can leave it empty
 
-/* Mapa de classificações `cuss` para prefixos. */
-var PREFIX = ['Tenha cuidado com', 'Reconsidere usar', 'Don’t use'];
+/* Map of `cuss` ratings to prefixes. */
+var PREFIX = ['Tenha cuidado com', 'Reconsidere usar', 'Não use'];
 
-/* Mapa de classificações `cuss` para sufixos. */
+/* Map of `cuss` ratings to suffixes. */
 var SUFFIX = [
   'isto é profano em alguns casos',
   'isto pode ser profano',
