@@ -5,3 +5,4 @@ node_modules/
 coverage/
 retext-profanities.js
 retext-profanities.min.js
+yarn.lock
