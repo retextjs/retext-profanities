@@ -19,7 +19,11 @@
     "Sylvan Swierkosz <sswierkosz@gmail.com>"
   ],
   "files": [
-    "index.js"
+    "index.js",
+    "factory.js",
+    "en.js",
+    "fr.js",
+    "pt-br.js"
   ],
   "dependencies": {
     "cuss": "^1.11.0",
