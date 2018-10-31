@@ -263,10 +263,10 @@ This document lists all checked phrases.
 | `chinaswede` | `chinaswede` |
 | `chinaswedes` | `chinaswedes` |
 | `chinese` | `chinese` |
-| `chingchong` | `chingchong` |
-| `chingchongs` | `chingchongs` |
 | `ching-chong` | `ching chong` |
 | `ching-chongs` | `ching chongs` |
+| `chingchong` | `chingchong` |
+| `chingchongs` | `chingchongs` |
 | `chink` | `chink` |
 | `chinks` | `chinks` |
 | `chinky` | `chinky` |
@@ -426,10 +426,10 @@ This document lists all checked phrases.
 | `deth` | `deth` |
 | `devil` | `devil` |
 | `devilworshipper` | `devilworshipper` |
-| `diaperhead` | `diaperhead` |
-| `diaperheads` | `diaperheads` |
 | `diaper-head` | `diaper head` |
 | `diaper-heads` | `diaper heads` |
+| `diaperhead` | `diaperhead` |
+| `diaperheads` | `diaperheads` |
 | `dick` | `dick` |
 | `dickbrain` | `dickbrain` |
 | `dickforbrains` | `dickforbrains` |
@@ -737,10 +737,10 @@ This document lists all checked phrases.
 | `hajis` | `hajis` |
 | `hajji` | `hajji` |
 | `hajjis` | `hajjis` |
-| `halfbreed` | `halfbreed` |
 | `half-breed` | `half breed` |
-| `halfcaste` | `halfcaste` |
 | `half-caste` | `half caste` |
+| `halfbreed` | `halfbreed` |
+| `halfcaste` | `halfcaste` |
 | `hamas` | `hamas` |
 | `handjob` | `handjob` |
 | `haole` | `haole` |
@@ -752,12 +752,12 @@ This document lists all checked phrases.
 | `headfuck` | `headfuck` |
 | `headlights` | `headlights` |
 | `hebe` | `hebe` |
-| `hebes` | `hebes` |
 | `hebephila` | `hebephila` |
 | `hebephile` | `hebephile` |
 | `hebephiles` | `hebephiles` |
 | `hebephilia` | `hebephilia` |
 | `hebephilic` | `hebephilic` |
+| `hebes` | `hebes` |
 | `heeb` | `heeb` |
 | `heebs` | `heebs` |
 | `hell` | `hell` |
@@ -1501,8 +1501,8 @@ This document lists all checked phrases.
 | `skwa` | `skwa` |
 | `skwe` | `skwe` |
 | `slant` | `slant` |
-| `slanty` | `slanty` |
 | `slanteye` | `slanteye` |
+| `slanty` | `slanty` |
 | `slapper` | `slapper` |
 | `slaughter` | `slaughter` |
 | `slav` | `slav` |
@@ -1571,9 +1571,9 @@ This document lists all checked phrases.
 | `spermhearder` | `spermhearder` |
 | `spermherder` | `spermherder` |
 | `spic` | `spic` |
-| `spics` | `spics` |
 | `spick` | `spick` |
 | `spicks` | `spicks` |
+| `spics` | `spics` |
 | `spig` | `spig` |
 | `spigotty` | `spigotty` |
 | `spik` | `spik` |
@@ -1644,6 +1644,8 @@ This document lists all checked phrases.
 | `timber-nigger` | `timber nigger` |
 | `timber-niggers` | `timber niggers` |
 | `timbernigger` | `timbernigger` |
+| `tinker` | `tinker` |
+| `tinkers` | `tinkers` |
 | `tinkle` | `tinkle` |
 | `tit` | `tit` |
 | `titbitnipply` | `titbitnipply` |
