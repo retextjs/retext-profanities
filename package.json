@@ -21,7 +21,9 @@
   "files": [
     "index.js",
     "factory.js",
+    "ar-latn.js",
     "en.js",
+    "es.js",
     "fr.js",
     "pt-br.js"
   ],

@@ -61,6 +61,10 @@ Check for profanities.
 
 See [`rules.md`][rules] for a list of rules.
 
+Note that Latin-script Arabic (`retext-profanities/ar-latn`), French
+(`retext-profanities/fr`), Spanish (`retext-profanities/es`), and Brazilian
+Portuguese (`retext-profanities/pt-br`) are also supported.
+
 ## Related
 
 *   [`retext-equality`](https://github.com/retextjs/retext-equality)

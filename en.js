@@ -1,13 +1,11 @@
 'use strict'
 
-var pluralize = require('pluralize')
-var cuss = require('cuss')
 var factory = require('./factory')
 
 module.exports = factory({
   lang: 'en',
-  cuss: cuss,
-  pluralize: pluralize,
+  cuss: require('cuss'),
+  pluralize: require('pluralize'),
   // Misclassified singulars and plurals.
   ignorePluralize: [
     'children',
