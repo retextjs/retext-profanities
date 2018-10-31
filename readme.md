@@ -22,20 +22,20 @@ He’s pretty set on beating your butt for sheriff.
 And our script, `example.js`, looks like this:
 
 ```javascript
-var vfile = require('to-vfile');
-var report = require('vfile-reporter');
-var unified = require('unified');
-var english = require('retext-english');
-var stringify = require('retext-stringify');
-var profanities = require('retext-profanities');
+var vfile = require('to-vfile')
+var report = require('vfile-reporter')
+var unified = require('unified')
+var english = require('retext-english')
+var stringify = require('retext-stringify')
+var profanities = require('retext-profanities')
 
 unified()
   .use(english)
   .use(profanities)
   .use(stringify)
-  .process(vfile.readSync('example.txt'), function (err, file) {
-    console.error(report(err || file));
-  });
+  .process(vfile.readSync('example.txt'), function(err, file) {
+    console.error(report(err || file))
+  })
 ```
 
 Now, running `node example` yields:
@@ -72,7 +72,8 @@ See [`rules.md`][rules] for a list of rules.
 
 ## Contribute
 
-See [`contributing.md` in `retextjs/retext`][contributing] for ways to get started.
+See [`contributing.md` in `retextjs/retext`][contributing] for ways to get
+started.
 
 This organisation has a [Code of Conduct][coc].  By interacting with this
 repository, organisation, or community you agree to abide by its terms.
