@@ -5,21 +5,13 @@ node_js:
 sudo: false
 after_script: bash <(curl -s https://codecov.io/bash)
 deploy:
-  - provider: npm
-    skip_cleanup: true
-    email: tituswormer@gmail.com
-    api_key:
-      secure: SrmjGDU9SpFwJckLQf2PwVPgJZaiUAZoR8t7mIZHcmE1TqtRlTq1w839hlP7XpLuEOlqYlUCppFQv3IZhEUy7gN+o95rE5BciLeajrtI+w6S8du5AzxkaEzMxR3DKTjy6p+sGlZZ+4QH6y1P1QJXIbod9Xw4vpv5KBZslOgicmLLTrI/Q6ConU+w0J5cTKmmLh/afVEHJ3vPq2smYZQnRRomM3IQj4BcpBXmSTa52KqYdSRjzAXPn8JNpO8QCunMISi5gdfTDRZaqZO3J7ihaYe2xh0vQdUaef1bseVTLlFJW7xW/IQmXWPKvV4R5r38vKje5Tqz3FC7mmmRHX7COlnWxgHGytgNgJKuQdHCzaz6u7K2rJm/nAhwLcCplXVPGNbDdXscHo0oMRi8MI4gKmXhpvoxxN4FaNgsKgdFr4gPUvtJ6kdMBsE2gax+KUrlvEQEGDZhK8mRFh3irZtwci9UEc6pkg9/Yu/YMiEG0AfS/JZSFz0syxpSZjWStmTlJ4RSct6sdHKFfcIl61uCxS8Ca2P7RvOZItn449heaWt0XYgBv3/W5xgBV+BUjaCU8f3KXhuZA1doHlC94h8ebDR5OCQg6g6NcukeyxozGr1GrFCdDH4QQwJBgjKju6onQAzbep13RTsQZ7T/AdmnvEkQJRVwEhQEzVrVBg96R18=
-    on:
-      tags: true
-      node: '9.0'
-  - provider: releases
-    skip_cleanup: true
-    api_key:
-      secure: FN1/hBp/SXbZf6YhskjUhbKw98B7aT6dzHOnU+66zwiOtZAjf/ENCtwEWnv0Y/lTGa87L3OzGGWm23tuT24rkLn6tPtMOqcREFXe8RuGRe1dwXO06fF6KiP1Ryfjpx8Xyqo+gjwNk+f6sCGPTpI0v9qjUp1sCGiLKv5FYcYaV4zQlwbT4K1Ux2jxdIJRar9qyuUls5G+8mQ/PWPOhvWLgewri95MY95wojemRdmRQgI1nCNhxY1I860dgTXR6B79IA2ajYiGS/OCCUSTooqBK7f1l5Wb0qDXFFoUmEVAlpjgin99Qz3NFyJgl6XJejTJ8H40RfWXaQowsCINEiZ6T2x2M99LoeGr4Ae+OfEx/KfhF6pF/iKvDnjKkVDrDCbG0N7lj8NtYKubmnKctQ/5WWDKpt7wq+zb82WTq56SZvDLD0WUrudhAvZvw6XwcyT31vaEuJ4p/774GE0uriBy/FtFGC+8H57mLV3G1B6wUAwyE7bZhe4xTXfTBy2WobKJvpGAU5Vl+9Wz0A/pIVvVD8n/JVO7lpFx3cjcyIMTQeBI3f28XSi/BllUrijuCP0KjbXGfwu8yDdLXQCC69QzfvWoyjzGdYtQilZkPPHmB25ewwv54smwB+UOjcVodQgx60vrZ+e1mNvEpgLi/YbFgr6OnQ6mTGgIwYsXForiqwA=
-    file:
-      - "retext-profanities.js"
-      - "retext-profanities.min.js"
-    on:
-      tags: true
-      node: '9.0'
+  provider: releases
+  skip_cleanup: true
+  api_key:
+    secure: FN1/hBp/SXbZf6YhskjUhbKw98B7aT6dzHOnU+66zwiOtZAjf/ENCtwEWnv0Y/lTGa87L3OzGGWm23tuT24rkLn6tPtMOqcREFXe8RuGRe1dwXO06fF6KiP1Ryfjpx8Xyqo+gjwNk+f6sCGPTpI0v9qjUp1sCGiLKv5FYcYaV4zQlwbT4K1Ux2jxdIJRar9qyuUls5G+8mQ/PWPOhvWLgewri95MY95wojemRdmRQgI1nCNhxY1I860dgTXR6B79IA2ajYiGS/OCCUSTooqBK7f1l5Wb0qDXFFoUmEVAlpjgin99Qz3NFyJgl6XJejTJ8H40RfWXaQowsCINEiZ6T2x2M99LoeGr4Ae+OfEx/KfhF6pF/iKvDnjKkVDrDCbG0N7lj8NtYKubmnKctQ/5WWDKpt7wq+zb82WTq56SZvDLD0WUrudhAvZvw6XwcyT31vaEuJ4p/774GE0uriBy/FtFGC+8H57mLV3G1B6wUAwyE7bZhe4xTXfTBy2WobKJvpGAU5Vl+9Wz0A/pIVvVD8n/JVO7lpFx3cjcyIMTQeBI3f28XSi/BllUrijuCP0KjbXGfwu8yDdLXQCC69QzfvWoyjzGdYtQilZkPPHmB25ewwv54smwB+UOjcVodQgx60vrZ+e1mNvEpgLi/YbFgr6OnQ6mTGgIwYsXForiqwA=
+  file:
+    - "retext-profanities.js"
+    - "retext-profanities.min.js"
+  on:
+    tags: true
+    node: '9.0'
