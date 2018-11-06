@@ -1,4 +1,4 @@
-# retext-profanities [![Build Status][travis-badge]][travis] [![Coverage Status][codecov-badge]][codecov]
+# retext-profanities [![Build][build-badge]][build] [![Coverage][coverage-badge]][coverage] [![Downloads][downloads-badge]][downloads] [![Chat][chat-badge]][chat]
 
 Check for [profane and vulgar][profanities] wording with
 [**retext**][retext].  Uses [cuss][] for sureness.
@@ -88,13 +88,21 @@ repository, organisation, or community you agree to abide by its terms.
 
 <!-- Definitions -->
 
-[travis-badge]: https://img.shields.io/travis/retextjs/retext-profanities.svg
+[build-badge]: https://img.shields.io/travis/retextjs/retext-profanities.svg
 
-[travis]: https://travis-ci.org/retextjs/retext-profanities
+[build]: https://travis-ci.org/retextjs/retext-profanities
 
-[codecov-badge]: https://img.shields.io/codecov/c/github/retextjs/retext-profanities.svg
+[coverage-badge]: https://img.shields.io/codecov/c/github/retextjs/retext-profanities.svg
 
-[codecov]: https://codecov.io/github/retextjs/retext-profanities
+[coverage]: https://codecov.io/github/retextjs/retext-profanities
+
+[downloads-badge]: https://img.shields.io/npm/dm/retext-profanities.svg
+
+[downloads]: https://www.npmjs.com/package/retext-profanities
+
+[chat-badge]: https://img.shields.io/badge/join%20the%20community-on%20spectrum-7b16ff.svg
+
+[chat]: https://spectrum.chat/unified/retext
 
 [npm]: https://docs.npmjs.com/cli/install
 
