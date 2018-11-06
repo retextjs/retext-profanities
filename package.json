@@ -16,7 +16,9 @@
   "author": "Titus Wormer <tituswormer@gmail.com> (https://wooorm.com)",
   "contributors": [
     "Titus Wormer <tituswormer@gmail.com> (https://wooorm.com)",
-    "Sylvan Swierkosz <sswierkosz@gmail.com>"
+    "Sylvan Swierkosz <sswierkosz@gmail.com>",
+    "Mathieu Jolivet",
+    "Otacilio Saraiva Maia Neto <otacilio.n97@gmail.com>"
   ],
   "files": [
     "index.js",
