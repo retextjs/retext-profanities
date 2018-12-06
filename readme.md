@@ -57,6 +57,11 @@ Check for profanities.
 
 `Array.<string>` — phrases _not_ to warn about.
 
+###### `options.sureness`
+
+`Number` — minimum _sureness_ to warn about, see
+[cuss](https://github.com/words/cuss#cuss).  Default `0`
+
 ## Rules
 
 See [`rules.md`][rules] for a list of rules.
