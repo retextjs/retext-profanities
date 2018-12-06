@@ -44,6 +44,7 @@ function factory(config) {
 
   function profanities(options) {
     var ignore = (options || {}).ignore || []
+    var sureness = (options || {}).sureness || 0
     var phrases = difference(keys(words), ignore)
     var normals = difference(phrases, regular)
     var literals = intersection(regular, phrases)
@@ -59,6 +60,10 @@ function factory(config) {
       function handle(match, position, parent, phrase) {
         var rating = words[phrase]
         var value = nlcstToString(match)
+
+        if (rating < sureness) {
+          return
+        }
 
         var message = file.warn(
           [
