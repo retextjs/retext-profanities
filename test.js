@@ -6,7 +6,7 @@ var french = require('./fr')
 var english = require('.')
 
 test('profanities', function(t) {
-  t.plan(10)
+  t.plan(12)
 
   retext()
     .use(english)
@@ -129,4 +129,26 @@ test('profanities', function(t) {
         '1:6-1:11: Don’t use “merde”, it’s profane'
       ])
     })
+
+  retext()
+    .use(english, {sureness: 1})
+    .process(
+      [
+        'He’s pretty set on beating your butt for sheriff.',
+        'What an asshat.',
+        'The kidnapper was the mother, an addict.'
+      ].join('\n'),
+      function(err, file) {
+        t.ifError(err, 'should not fail (#1)')
+
+        t.deepEqual(
+          file.messages.map(String),
+          [
+            '2:9-2:15: Don’t use “asshat”, it’s profane',
+            '3:34-3:40: Reconsider using “addict”, it may be profane'
+          ],
+          'should warn about profanities'
+        )
+      }
+    )
 })
