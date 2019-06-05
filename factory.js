@@ -65,7 +65,7 @@ function factory(config) {
           return
         }
 
-        var message = file.warn(
+        var message = file.message(
           [
             prefixes[rating],
             quotation(value, openingQuote, closingQuote) + comma,
