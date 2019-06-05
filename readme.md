@@ -1,27 +1,36 @@
-# retext-profanities [![Build][build-badge]][build] [![Coverage][coverage-badge]][coverage] [![Downloads][downloads-badge]][downloads] [![Chat][chat-badge]][chat]
+# retext-profanities
 
-Check for [profane and vulgar][profanities] wording with
-[**retext**][retext].  Uses [cuss][] for sureness.
+[![Build][build-badge]][build]
+[![Coverage][coverage-badge]][coverage]
+[![Downloads][downloads-badge]][downloads]
+[![Size][size-badge]][size]
+[![Sponsors][sponsors-badge]][collective]
+[![Backers][backers-badge]][collective]
+[![Chat][chat-badge]][chat]
 
-## Installation
+[**retext**][retext] plugin to check for [profane and vulgar][profanities]
+wording.
+Uses [`cuss`][cuss] for sureness.
+
+## Install
 
 [npm][]:
 
-```bash
+```sh
 npm install retext-profanities
 ```
 
-## Usage
+## Use
 
 Say we have the following file, `example.txt`:
 
-```text
+```txt
 He’s pretty set on beating your butt for sheriff.
 ```
 
-And our script, `example.js`, looks like this:
+…and our script, `example.js`, looks like this:
 
-```javascript
+```js
 var vfile = require('to-vfile')
 var report = require('vfile-reporter')
 var unified = require('unified')
@@ -40,7 +49,7 @@ unified()
 
 Now, running `node example` yields:
 
-```text
+```txt
 example.txt
   1:33-1:37  warning  Be careful with “butt”, it’s profane in some cases  butt  retext-profanities
 
@@ -51,16 +60,16 @@ example.txt
 
 ### `retext().use(profanities[, options])`
 
-Check for profanities.
+check for [profane and vulgar][profanities] wording.
+Uses [`cuss`][cuss] for sureness.
 
 ###### `options.ignore`
 
-`Array.<string>` — phrases *not* to warn about.
+Phrases *not* to warn about (`Array.<string>`, default: `[]`).
 
 ###### `options.sureness`
 
-`Number` — minimum *sureness* to warn about, see
-[cuss](https://github.com/words/cuss#cuss).  Default `0`
+Minimum *sureness* to warn about, see [`cuss`][cuss] (`number`, default: `0`).
 
 ## Rules
 
@@ -81,11 +90,13 @@ Portuguese (`retext-profanities/pt-br`) are also supported.
 
 ## Contribute
 
-See [`contributing.md` in `retextjs/retext`][contributing] for ways to get
-started.
+See [`contributing.md`][contributing] in [`retextjs/.github`][health] for ways
+to get started.
+See [`support.md`][support] for ways to get help.
 
-This organisation has a [Code of Conduct][coc].  By interacting with this
-repository, organisation, or community you agree to abide by its terms.
+This project has a [Code of Conduct][coc].
+By interacting with this repository, organisation, or community you agree to
+abide by its terms.
 
 ## License
 
@@ -105,11 +116,29 @@ repository, organisation, or community you agree to abide by its terms.
 
 [downloads]: https://www.npmjs.com/package/retext-profanities
 
+[size-badge]: https://img.shields.io/bundlephobia/minzip/retext-profanities.svg
+
+[size]: https://bundlephobia.com/result?p=retext-profanities
+
+[sponsors-badge]: https://opencollective.com/unified/sponsors/badge.svg
+
+[backers-badge]: https://opencollective.com/unified/backers/badge.svg
+
+[collective]: https://opencollective.com/unified
+
 [chat-badge]: https://img.shields.io/badge/join%20the%20community-on%20spectrum-7b16ff.svg
 
 [chat]: https://spectrum.chat/unified/retext
 
 [npm]: https://docs.npmjs.com/cli/install
+
+[health]: https://github.com/retextjs/.github
+
+[contributing]: https://github.com/retextjs/.github/blob/master/contributing.md
+
+[support]: https://github.com/retextjs/.github/blob/master/support.md
+
+[coc]: https://github.com/retextjs/.github/blob/master/code-of-conduct.md
 
 [license]: license
 
@@ -122,7 +151,3 @@ repository, organisation, or community you agree to abide by its terms.
 [cuss]: https://github.com/words/cuss
 
 [rules]: rules.md
-
-[contributing]: https://github.com/retextjs/retext/blob/master/contributing.md
-
-[coc]: https://github.com/retextjs/retext/blob/master/code-of-conduct.md
