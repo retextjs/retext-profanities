@@ -55,11 +55,11 @@ Check for profanities.
 
 ###### `options.ignore`
 
-`Array.<string>` — phrases _not_ to warn about.
+`Array.<string>` — phrases *not* to warn about.
 
 ###### `options.sureness`
 
-`Number` — minimum _sureness_ to warn about, see
+`Number` — minimum *sureness* to warn about, see
 [cuss](https://github.com/words/cuss#cuss).  Default `0`
 
 ## Rules

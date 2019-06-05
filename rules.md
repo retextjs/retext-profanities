@@ -375,6 +375,7 @@ This document lists all checked phrases.
 | `cumm` | `cumm` |
 | `cummer` | `cummer` |
 | `cumming` | `cumming` |
+| `cummings` | `cummings` |
 | `cumquat` | `cumquat` |
 | `cumqueen` | `cumqueen` |
 | `cumshot` | `cumshot` |
