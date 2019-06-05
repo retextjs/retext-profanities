@@ -1,15 +1,16 @@
 {
   "name": "retext-profanities",
   "version": "4.6.0",
-  "description": "Check for profane and vulgar wording with retext",
+  "description": "retext plugin to check for profane and vulgar wording",
   "license": "MIT",
   "keywords": [
+    "unified",
+    "retext",
+    "plugin",
     "profane",
     "obscene",
     "vulgar",
-    "profanities",
-    "retext",
-    "plugin"
+    "profanities"
   ],
   "repository": "retextjs/retext-profanities",
   "bugs": "https://github.com/retextjs/retext-profanities/issues",
