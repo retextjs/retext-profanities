@@ -28,10 +28,11 @@
     "en.js",
     "es.js",
     "fr.js",
+    "it.js",
     "pt-br.js"
   ],
   "dependencies": {
-    "cuss": "^1.11.0",
+    "cuss": "^1.15.0",
     "lodash.difference": "^4.5.0",
     "lodash.intersection": "^4.4.0",
     "nlcst-search": "^1.0.0",
