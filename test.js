@@ -14,9 +14,9 @@ test('profanities', function(t) {
         [
           null,
           {
-            message: 'Don’t use “Shit”, it’s profane',
+            message: 'Don’t use `Shit`, it’s profane',
             name: '1:1-1:5',
-            reason: 'Don’t use “Shit”, it’s profane',
+            reason: 'Don’t use `Shit`, it’s profane',
             line: 1,
             column: 1,
             location: {
@@ -28,7 +28,7 @@ test('profanities', function(t) {
             fatal: false,
             profanitySeverity: 2,
             actual: 'Shit',
-            expected: null
+            expected: []
           }
         ],
         'should warn'
@@ -43,9 +43,9 @@ test('profanities', function(t) {
         [
           null,
           {
-            message: 'Don’t use “Merde”, it’s profane',
+            message: 'Don’t use `Merde`, it’s profane',
             name: '1:1-1:6',
-            reason: 'Don’t use “Merde”, it’s profane',
+            reason: 'Don’t use `Merde`, it’s profane',
             line: 1,
             column: 1,
             location: {
@@ -57,7 +57,7 @@ test('profanities', function(t) {
             fatal: false,
             profanitySeverity: 2,
             actual: 'Merde',
-            expected: null
+            expected: []
           }
         ],
         'should support other languages'
@@ -77,9 +77,9 @@ test('profanities', function(t) {
           [err].concat(file.messages.map(String)),
           [
             null,
-            '1:33-1:37: Be careful with “butt”, it’s profane in some cases',
-            '2:9-2:15: Don’t use “asshat”, it’s profane',
-            '3:34-3:40: Reconsider using “addict”, it may be profane'
+            '1:33-1:37: Be careful with `butt`, it’s profane in some cases',
+            '2:9-2:15: Don’t use `asshat`, it’s profane',
+            '3:34-3:40: Reconsider using `addict`, it may be profane'
           ],
           'should warn about profanities'
         )
@@ -108,7 +108,7 @@ test('profanities', function(t) {
           [err].concat(file.messages.map(String)),
           [
             null,
-            '1:25-1:29: Be careful with “hell”, it’s profane in some cases'
+            '1:25-1:29: Be careful with `hell`, it’s profane in some cases'
           ],
           'should correctly depend on apostrophes'
         )
@@ -122,8 +122,8 @@ test('profanities', function(t) {
         [err].concat(file.messages.map(String)),
         [
           null,
-          '1:1-1:6: Don’t use “slave”, it’s profane',
-          '1:7-1:13: Don’t use “slaves”, it’s profane'
+          '1:1-1:6: Don’t use `slave`, it’s profane',
+          '1:7-1:13: Don’t use `slaves`, it’s profane'
         ],
         'should support plurals and singulars'
       )
@@ -142,8 +142,8 @@ test('profanities', function(t) {
           [err].concat(file.messages.map(String)),
           [
             null,
-            '2:9-2:15: Don’t use “asshat”, it’s profane',
-            '3:34-3:40: Reconsider using “addict”, it may be profane'
+            '2:9-2:15: Don’t use `asshat`, it’s profane',
+            '3:34-3:40: Reconsider using `addict`, it may be profane'
           ],
           'should warn about profanities'
         )

@@ -21,8 +21,6 @@ var pid = 'retext-profanities'
 var english = 'en'
 var dash = '-'
 var comma = ','
-var openingQuote = '“'
-var closingQuote = '”'
 var word = /\W+/g
 var dashLetter = /-([a-z])/g
 
@@ -68,20 +66,19 @@ function factory(config) {
         var message = file.message(
           [
             prefixes[rating],
-            quotation(value, openingQuote, closingQuote) + comma,
+            quotation(value, '`') + comma,
             suffixes[rating]
           ].join(' '),
           {
             start: match[0].position.start,
             end: match[match.length - 1].position.end
-          }
+          },
+          [source, phrase.replace(word, dash)].join(':')
         )
 
-        message.ruleId = phrase.replace(word, dash)
         message.profanitySeverity = rating
-        message.source = source
         message.actual = value
-        message.expected = null
+        message.expected = []
       }
     }
   }
