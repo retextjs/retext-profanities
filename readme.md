@@ -88,7 +88,7 @@ following fields:
 
 ###### `message.source`
 
-Name of this plugin (`'retext-equality'`).
+Name of this plugin (`'retext-profanities'`).
 
 ###### `message.ruleId`
 
