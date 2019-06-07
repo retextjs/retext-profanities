@@ -79,6 +79,33 @@ Note that Latin-script Arabic (`retext-profanities/ar-latn`), French
 (`retext-profanities/fr`), Spanish (`retext-profanities/es`), and Brazilian
 Portuguese (`retext-profanities/pt-br`) are also supported.
 
+### Messages
+
+See [`rules.md`][rules] for a list of rules and how rules work.
+
+Each message is emitted as a [`VFileMessage`][message] on `file`, with the
+following fields:
+
+###### `message.source`
+
+Name of this plugin (`'retext-equality'`).
+
+###### `message.ruleId`
+
+See `id` in [`rules.md`][rules].
+
+###### `message.profanitySeverity`
+
+[Cuss][] sureness (`number`).
+
+###### `message.actual`
+
+Profane phrase (`string`).
+
+###### `message.expected`
+
+Empty array to signal that `actual` should be removed or changed (`[]`).
+
 ## Related
 
 *   [`retext-equality`](https://github.com/retextjs/retext-equality)
@@ -145,6 +172,8 @@ abide by its terms.
 [author]: https://wooorm.com
 
 [retext]: https://github.com/retextjs/retext
+
+[message]: https://github.com/vfile/vfile-message
 
 [profanities]: https://github.com/words/profanities
 
