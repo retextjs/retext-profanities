@@ -1679,6 +1679,7 @@ This document lists all checked phrases.
 | `transexual` | `transexual` |
 | `transsexual` | `transsexual` |
 | `transvestite` | `transvestite` |
+| `trap` | `trap` |
 | `triplex` | `triplex` |
 | `trisexual` | `trisexual` |
 | `trojan` | `trojan` |
