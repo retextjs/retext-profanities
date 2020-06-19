@@ -7,7 +7,7 @@ This document lists all checked phrases.
 ## List of Rules
 
 | id | phrase |
-| --- | ------ |
+| - | - |
 | `abbo` | `abbo` |
 | `abeed` | `abeed` |
 | `abid` | `abid` |
