@@ -867,6 +867,7 @@ This document lists all checked phrases.
 | `jesus` | `jesus` |
 | `jesuschrist` | `jesuschrist` |
 | `jew` | `jew` |
+| `jewboy` | `jewboy` |
 | `jewed` | `jewed` |
 | `jewess` | `jewess` |
 | `jewish` | `jewish` |
@@ -1450,6 +1451,7 @@ This document lists all checked phrases.
 | `shawtypimp` | `shawtypimp` |
 | `sheeney` | `sheeney` |
 | `shhit` | `shhit` |
+| `shiksa` | `shiksa` |
 | `shinola` | `shinola` |
 | `shit` | `shit` |
 | `shitcan` | `shitcan` |
