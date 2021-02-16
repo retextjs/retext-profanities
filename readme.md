@@ -132,9 +132,9 @@ abide by its terms.
 
 <!-- Definitions -->
 
-[build-badge]: https://img.shields.io/travis/retextjs/retext-profanities.svg
+[build-badge]: https://github.com/retextjs/retext-profanities/workflows/main/badge.svg
 
-[build]: https://travis-ci.org/retextjs/retext-profanities
+[build]: https://github.com/retextjs/retext-profanities/actions
 
 [coverage-badge]: https://img.shields.io/codecov/c/github/retextjs/retext-profanities.svg
 
