@@ -8,9 +8,9 @@ var english = require('.')
 test('profanities', function (t) {
   retext()
     .use(english)
-    .process('Shit!', function (err, file) {
+    .process('Shit!', function (error, file) {
       t.deepEqual(
-        JSON.parse(JSON.stringify([err].concat(file.messages))),
+        JSON.parse(JSON.stringify([error].concat(file.messages))),
         [
           null,
           {
@@ -37,9 +37,9 @@ test('profanities', function (t) {
 
   retext()
     .use(french)
-    .process('Merde!', function (err, file) {
+    .process('Merde!', function (error, file) {
       t.deepEqual(
-        [err].concat(file.messages.map(String)),
+        [error].concat(file.messages.map(String)),
         [null, '1:1-1:6: Don’t use `Merde`, it’s profane'],
         'should support other languages'
       )
@@ -53,9 +53,9 @@ test('profanities', function (t) {
         'What an asshat.',
         'The kidnapper was the mother, an addict.'
       ].join('\n'),
-      function (err, file) {
+      function (error, file) {
         t.deepEqual(
-          [err].concat(file.messages.map(String)),
+          [error].concat(file.messages.map(String)),
           [
             null,
             '1:33-1:37: Be careful with `butt`, it’s profane in some cases',
@@ -71,9 +71,9 @@ test('profanities', function (t) {
     .use(english, {ignore: ['butt']})
     .process(
       ['He’s pretty set on beating your butt for sheriff.'].join('\n'),
-      function (err, file) {
+      function (error, file) {
         t.deepEqual(
-          [err].concat(file.messages.map(String)),
+          [error].concat(file.messages.map(String)),
           [null],
           'should not warn for `ignore`d phrases'
         )
@@ -84,9 +84,9 @@ test('profanities', function (t) {
     .use(english)
     .process(
       ['When he’ll freeze over, hell freezes over.'].join('\n'),
-      function (err, file) {
+      function (error, file) {
         t.deepEqual(
-          [err].concat(file.messages.map(String)),
+          [error].concat(file.messages.map(String)),
           [
             null,
             '1:25-1:29: Be careful with `hell`, it’s profane in some cases'
@@ -98,9 +98,9 @@ test('profanities', function (t) {
 
   retext()
     .use(english)
-    .process('slave slaves', function (err, file) {
+    .process('slave slaves', function (error, file) {
       t.deepEqual(
-        [err].concat(file.messages.map(String)),
+        [error].concat(file.messages.map(String)),
         [
           null,
           '1:1-1:6: Don’t use `slave`, it’s profane',
@@ -118,9 +118,9 @@ test('profanities', function (t) {
         'What an asshat.',
         'The kidnapper was the mother, an addict.'
       ].join('\n'),
-      function (err, file) {
+      function (error, file) {
         t.deepEqual(
-          [err].concat(file.messages.map(String)),
+          [error].concat(file.messages.map(String)),
           [
             null,
             '2:9-2:15: Don’t use `asshat`, it’s profane',

@@ -49,20 +49,20 @@
     "quotation": "^1.0.0"
   },
   "devDependencies": {
-    "browserify": "^16.0.0",
+    "browserify": "^17.0.0",
     "mdast-util-heading-range": "^2.0.0",
     "nyc": "^15.0.0",
     "prettier": "^2.0.0",
-    "remark-cli": "^8.0.0",
-    "remark-preset-wooorm": "^7.0.0",
+    "remark-cli": "^9.0.0",
+    "remark-preset-wooorm": "^8.0.0",
     "retext": "^7.0.0",
     "tape": "^5.0.0",
     "tinyify": "^3.0.0",
     "unist-builder": "^2.0.0",
-    "xo": "^0.33.0"
+    "xo": "^0.37.0"
   },
   "scripts": {
-    "format": "remark . -qfo && prettier . --write && xo --fix",
+    "format": "remark . -qfo && prettier . -w --loglevel warn && xo --fix",
     "build-bundle": "browserify . -s retextProfanities > retext-profanities.js",
     "build-mangle": "browserify . -s retextProfanities -p tinyify > retext-profanities.min.js",
     "build": "npm run build-bundle && npm run build-mangle",
@@ -88,7 +88,7 @@
     "prettier": true,
     "esnext": false,
     "rules": {
-      "unicorn/no-fn-reference-in-iterator": "off",
+      "unicorn/no-array-callback-reference": "off",
       "unicorn/prefer-includes": "off",
       "guard-for-in": "off"
     },
@@ -97,14 +97,17 @@
     ]
   },
   "remarkConfig": {
-    "settings": {
-      "tablePipeAlign": false
-    },
     "plugins": [
       "preset-wooorm",
       [
         "remark-lint-table-pipe-alignment",
         false
+      ],
+      [
+        "gfm",
+        {
+          "tablePipeAlign": false
+        }
       ],
       "./script/build-table"
     ]
