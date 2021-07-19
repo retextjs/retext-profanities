@@ -86,7 +86,7 @@ See [`rules.md`][rules] for a list of rules.
 
 Note that Latin-script Arabic (`retext-profanities/ar-latn`), French
 (`retext-profanities/fr`), Spanish (`retext-profanities/es`), Italian
-(`retext-profanities/it`), and Brazilian Portuguese (`retext-profanities/pt-br`)
+(`retext-profanities/it`), and Portuguese (Brazilian) (`retext-profanities/pt`)
 are also supported.
 
 ### Messages

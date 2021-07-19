@@ -1,12 +1,18 @@
+/**
+ * @typedef {import('mdast').TableRow} TableRow
+ */
+
 import {headingRange} from 'mdast-util-heading-range'
 import {u} from 'unist-builder'
 import {cuss} from 'cuss'
 
 const own = {}.hasOwnProperty
 
+/** @type {import('unified').Plugin<[]>} */
 export default function table() {
   return (tree) => {
-    headingRange(tree, 'list of rules', (start, nodes, end) => {
+    headingRange(tree, 'list of rules', (start, _, end) => {
+      /** @type {TableRow[]} */
       const rows = [
         u('tableRow', [
           u('tableCell', [u('text', 'id')]),
@@ -14,6 +20,7 @@ export default function table() {
         ])
       ]
 
+      /** @type {string} */
       let phrase
 
       for (phrase in cuss) {
@@ -27,7 +34,7 @@ export default function table() {
         }
       }
 
-      return [start].concat(u('table', rows), end)
+      return [start, u('table', rows), end]
     })
   }
 }
