@@ -2,8 +2,8 @@
  * @typedef {import('./factory.js').Options} Options
  */
 
-import {factory} from './factory.js'
 import {cuss} from 'cuss/ar-latn.js'
+import {factory} from './factory.js'
 
 const retextProfanitiesArLatn = factory({lang: 'ar-latn', cuss})
 

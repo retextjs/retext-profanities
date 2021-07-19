@@ -2,9 +2,9 @@
  * @typedef {import('./factory.js').Options} Options
  */
 
-import {factory} from './factory.js'
 import {cuss} from 'cuss'
 import pluralize from 'pluralize'
+import {factory} from './factory.js'
 
 const retextProfanitiesEn = factory({
   lang: 'en',
