@@ -1,5 +1,2 @@
 coverage/
-retext-profanities.js
-retext-profanities.min.js
-*.json
 *.md
