@@ -1,9 +1,8 @@
-import keys from 'object-keys'
 import difference from 'lodash.difference'
 import intersection from 'lodash.intersection'
-import nlcstToString from 'nlcst-to-string'
-import quotation from 'quotation'
-import search from 'nlcst-search'
+import {search} from 'nlcst-search'
+import {toString} from 'nlcst-to-string'
+import {quotation} from 'quotation'
 
 // Map of `cuss` ratings to prefixes.
 var prefixes = ['Be careful with', 'Reconsider using', 'Don’t use']
@@ -39,7 +38,7 @@ export function factory(config) {
   function profanities(options) {
     var ignore = (options || {}).ignore || []
     var sureness = (options || {}).sureness || 0
-    var phrases = difference(keys(words), ignore)
+    var phrases = difference(Object.keys(words), ignore)
     var normals = difference(phrases, regular)
     var literals = intersection(regular, phrases)
 
@@ -53,7 +52,7 @@ export function factory(config) {
       // Handle a match.
       function handle(match, position, parent, phrase) {
         var rating = words[phrase]
-        var value = nlcstToString(match)
+        var value = toString(match)
 
         if (rating < sureness) {
           return

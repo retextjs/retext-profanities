@@ -45,11 +45,10 @@
     "cuss": "^2.0.0",
     "lodash.difference": "^4.5.0",
     "lodash.intersection": "^4.4.0",
-    "nlcst-search": "^2.0.0",
-    "nlcst-to-string": "^2.0.0",
-    "object-keys": "^1.0.9",
+    "nlcst-search": "^3.0.0",
+    "nlcst-to-string": "^3.0.0",
     "pluralize": "^8.0.0",
-    "quotation": "^1.0.0"
+    "quotation": "^2.0.0"
   },
   "devDependencies": {
     "c8": "^7.0.0",
