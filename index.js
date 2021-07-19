@@ -1,3 +1,3 @@
-import retextProfanitiesEn from './en.js'
+import retextProfanities from './en.js'
 
-export default retextProfanitiesEn
+export default retextProfanities

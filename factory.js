@@ -4,107 +4,81 @@ import {search} from 'nlcst-search'
 import {toString} from 'nlcst-to-string'
 import {quotation} from 'quotation'
 
-// Map of `cuss` ratings to prefixes.
-var prefixes = ['Be careful with', 'Reconsider using', 'Don’t use']
-
-// Map of `cuss` ratings to suffixes.
-var suffixes = [
-  'it’s profane in some cases',
-  'it may be profane',
-  'it’s profane'
-]
-
-var pid = 'retext-profanities'
-var english = 'en'
-var dash = '-'
-var comma = ','
-var word = /\W+/g
-var dashLetter = /-([a-z])/g
+const own = {}.hasOwnProperty
 
 export function factory(config) {
-  var lang = config.lang
-  var regular = config.regular
-  var pluralize = config.pluralize
-  var ignorePluralize = config.ignorePluralize
-  var words = unpack(config.cuss)
-  var source = pid + (config.lang === english ? '' : dash + lang)
+  const words = unpack(config.cuss)
+  const source =
+    'retext-profanities' + (config.lang === 'en' ? '' : '-' + config.lang)
 
-  profanities.displayName = [pid, lang]
-    .join(dash)
-    .replace(dashLetter, titleCase)
+  return (options = {}) => {
+    const ignore = options.ignore || []
+    const sureness = options.sureness || 0
+    const phrases = difference(Object.keys(words), ignore)
+    const normals = difference(phrases, config.regular)
+    const literals = intersection(config.regular, phrases)
 
-  return profanities
-
-  function profanities(options) {
-    var ignore = (options || {}).ignore || []
-    var sureness = (options || {}).sureness || 0
-    var phrases = difference(Object.keys(words), ignore)
-    var normals = difference(phrases, regular)
-    var literals = intersection(regular, phrases)
-
-    return transformer
-
-    // Search for violations.
-    function transformer(tree, file) {
+    return (tree, file) => {
       search(tree, normals, handle)
       search(tree, literals, handle, true)
 
       // Handle a match.
       function handle(match, position, parent, phrase) {
-        var rating = words[phrase]
-        var value = toString(match)
+        const profanitySeverity = words[phrase]
+        const actual = toString(match)
 
-        if (rating < sureness) {
+        if (profanitySeverity < sureness) {
           return
         }
 
-        var message = file.message(
-          [
-            prefixes[rating],
-            quotation(value, '`') + comma,
-            suffixes[rating]
-          ].join(' '),
-          {
-            start: match[0].position.start,
-            end: match[match.length - 1].position.end
-          },
-          [source, phrase.replace(word, dash)].join(':')
+        Object.assign(
+          file.message(
+            [
+              profanitySeverity === 0
+                ? 'Be careful with'
+                : profanitySeverity === 1
+                ? 'Reconsider using'
+                : 'Don’t use',
+              quotation(actual, '`') + ',',
+              profanitySeverity === 0
+                ? 'it’s profane in some cases'
+                : profanitySeverity === 1
+                ? 'it may be profane'
+                : 'it’s profane'
+            ].join(' '),
+            {
+              start: match[0].position.start,
+              end: match[match.length - 1].position.end
+            },
+            [source, phrase.replace(/\W+/g, '-')].join(':')
+          ),
+          {profanitySeverity, actual, expected: []}
         )
-
-        message.profanitySeverity = rating
-        message.actual = value
-        message.expected = []
       }
     }
   }
 
   function unpack(map) {
-    var result = {}
-    var key
-    var rating
+    const result = {}
+    let key
 
     for (key in map) {
-      rating = map[key]
-      add(key, rating)
+      if (own.call(map, key)) {
+        add(key, map[key])
 
-      if (pluralize) {
-        add(pluralize.singular(key), rating)
-        add(pluralize.plural(key), rating)
-      } else {
-        add(key, rating)
+        if (config.pluralize) {
+          add(config.pluralize.singular(key), map[key])
+          add(config.pluralize.plural(key), map[key])
+        }
       }
     }
 
     function add(key, value) {
-      if (!ignorePluralize || ignorePluralize.indexOf(key) === -1) {
+      if (!config.ignorePluralize || !config.ignorePluralize.includes(key)) {
         result[key] = value
       }
     }
 
     return result
   }
-}
-
-function titleCase($0, $1) {
-  return $1.charAt(0).toUpperCase()
 }
