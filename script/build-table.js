@@ -1,5 +1,5 @@
-import range from 'mdast-util-heading-range'
-import u from 'unist-builder'
+import {headingRange} from 'mdast-util-heading-range'
+import {u} from 'unist-builder'
 import {cuss} from 'cuss'
 
 export default function table() {
@@ -7,7 +7,7 @@ export default function table() {
 }
 
 function transformer(tree) {
-  range(tree, 'list of rules', function (start, nodes, end) {
+  headingRange(tree, 'list of rules', function (start, nodes, end) {
     var rows = [
       u('tableRow', [
         u('tableCell', [u('text', 'id')]),

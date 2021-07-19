@@ -1,5 +1,5 @@
 import test from 'tape'
-import retext from 'retext'
+import {retext} from 'retext'
 import french from './fr.js'
 import english from './index.js'
 
@@ -12,17 +12,17 @@ test('profanities', function (t) {
         [
           null,
           {
-            message: 'Don’t use `Shit`, it’s profane',
             name: '1:1-1:5',
+            message: 'Don’t use `Shit`, it’s profane',
             reason: 'Don’t use `Shit`, it’s profane',
             line: 1,
             column: 1,
-            location: {
+            source: 'retext-profanities',
+            ruleId: 'shit',
+            position: {
               start: {line: 1, column: 1, offset: 0},
               end: {line: 1, column: 5, offset: 4}
             },
-            source: 'retext-profanities',
-            ruleId: 'shit',
             fatal: false,
             profanitySeverity: 2,
             actual: 'Shit',
