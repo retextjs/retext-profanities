@@ -1,8 +1,6 @@
-'use strict'
+import {factory} from './factory.js'
+import {cuss} from 'cuss/es.js'
 
-var factory = require('./factory')
+const retextProfanitiesEs = factory({lang: 'es', cuss})
 
-module.exports = factory({
-  lang: 'es',
-  cuss: require('cuss/es')
-})
+export default retextProfanitiesEs

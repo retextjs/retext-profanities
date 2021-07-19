@@ -1,12 +1,8 @@
-'use strict'
+import range from 'mdast-util-heading-range'
+import u from 'unist-builder'
+import {cuss} from 'cuss'
 
-var range = require('mdast-util-heading-range')
-var u = require('unist-builder')
-var cuss = require('cuss')
-
-module.exports = table
-
-function table() {
+export default function table() {
   return transformer
 }
 
@@ -19,14 +15,16 @@ function transformer(tree) {
       ])
     ]
 
-    Object.keys(cuss).forEach(function (phrase) {
+    let phrase
+
+    for (phrase in cuss) {
       rows.push(
         u('tableRow', [
           u('tableCell', [u('inlineCode', id(phrase))]),
           u('tableCell', [u('inlineCode', phrase)])
         ])
       )
-    })
+    }
 
     return [start].concat(u('table', rows), end)
   })

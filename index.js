@@ -1,3 +1,3 @@
-'use strict'
+import retextProfanitiesEn from './en.js'
 
-module.exports = require('./en')
+export default retextProfanitiesEn

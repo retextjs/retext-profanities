@@ -1,11 +1,9 @@
-'use strict'
-
-var keys = require('object-keys')
-var difference = require('lodash.difference')
-var intersection = require('lodash.intersection')
-var nlcstToString = require('nlcst-to-string')
-var quotation = require('quotation')
-var search = require('nlcst-search')
+import keys from 'object-keys'
+import difference from 'lodash.difference'
+import intersection from 'lodash.intersection'
+import nlcstToString from 'nlcst-to-string'
+import quotation from 'quotation'
+import search from 'nlcst-search'
 
 // Map of `cuss` ratings to prefixes.
 var prefixes = ['Be careful with', 'Reconsider using', 'Don’t use']
@@ -24,9 +22,7 @@ var comma = ','
 var word = /\W+/g
 var dashLetter = /-([a-z])/g
 
-module.exports = factory
-
-function factory(config) {
+export function factory(config) {
   var lang = config.lang
   var regular = config.regular
   var pluralize = config.pluralize

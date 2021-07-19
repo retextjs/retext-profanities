@@ -1,9 +1,7 @@
-'use strict'
-
-var test = require('tape')
-var retext = require('retext')
-var french = require('./fr')
-var english = require('.')
+import test from 'tape'
+import retext from 'retext'
+import french from './fr.js'
+import english from './index.js'
 
 test('profanities', function (t) {
   retext()

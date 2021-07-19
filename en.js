@@ -1,11 +1,11 @@
-'use strict'
+import {factory} from './factory.js'
+import {cuss} from 'cuss'
+import pluralize from 'pluralize'
 
-var factory = require('./factory')
-
-module.exports = factory({
+const retextProfanitiesEn = factory({
   lang: 'en',
-  cuss: require('cuss'),
-  pluralize: require('pluralize'),
+  cuss,
+  pluralize,
   // Misclassified singulars and plurals.
   ignorePluralize: [
     'children',
@@ -18,3 +18,5 @@ module.exports = factory({
   // List of values not to normalize.
   regular: ['hell']
 })
+
+export default retextProfanitiesEn

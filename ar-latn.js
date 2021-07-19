@@ -1,8 +1,6 @@
-'use strict'
+import {factory} from './factory.js'
+import {cuss} from 'cuss/ar-latn.js'
 
-var factory = require('./factory')
+const retextProfanitiesArLatn = factory({lang: 'ar-latn', cuss})
 
-module.exports = factory({
-  lang: 'ar-latn',
-  cuss: require('cuss/ar-latn')
-})
+export default retextProfanitiesArLatn
