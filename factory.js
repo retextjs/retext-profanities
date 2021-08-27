@@ -1,4 +1,6 @@
 /**
+ * @typedef {import('nlcst').Root} Root
+ *
  * @typedef Config
  * @property {string} lang
  * @property {Record<string, number>} cuss
@@ -34,7 +36,7 @@ export function factory(config) {
    * Plugin to check for profane and vulgar wording.
    * Uses `cuss` for sureness.
    *
-   * @type {import('unified').Plugin<[Options?]>}
+   * @type {import('unified').Plugin<[Options?], Root>}
    */
   return (options = {}) => {
     const ignore = options.ignore || []

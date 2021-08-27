@@ -1,5 +1,6 @@
 /**
- * @typedef {import('mdast').TableRow} TableRow
+ * @typedef {import('mdast').Root} Root
+ * @typedef {import('mdast').TableContent} TableContent
  */
 
 import {headingRange} from 'mdast-util-heading-range'
@@ -8,11 +9,11 @@ import {cuss} from 'cuss'
 
 const own = {}.hasOwnProperty
 
-/** @type {import('unified').Plugin<[]>} */
+/** @type {import('unified').Plugin<[], Root>} */
 export default function table() {
   return (tree) => {
     headingRange(tree, 'list of rules', (start, _, end) => {
-      /** @type {TableRow[]} */
+      /** @type {TableContent[]} */
       const rows = [
         u('tableRow', [
           u('tableCell', [u('text', 'id')]),

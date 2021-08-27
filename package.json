@@ -51,6 +51,7 @@
     "pt.js"
   ],
   "dependencies": {
+    "@types/nlcst": "^1.0.0",
     "cuss": "^2.0.0",
     "nlcst-search": "^3.0.0",
     "nlcst-to-string": "^3.0.0",
