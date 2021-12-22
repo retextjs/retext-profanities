@@ -28,7 +28,8 @@ test('profanities', (t) => {
             fatal: false,
             profanitySeverity: 2,
             actual: 'Shit',
-            expected: []
+            expected: [],
+            url: 'https://github.com/retextjs/retext-profanities#readme'
           }
         ],
         'should warn'
