@@ -2,6 +2,4 @@
  * @typedef {import('./factory.js').Options} Options
  */
 
-import retextProfanities from './en.js'
-
-export default retextProfanities
+export {default} from './en.js'
