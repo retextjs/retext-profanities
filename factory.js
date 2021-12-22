@@ -23,6 +23,8 @@ import {pointStart, pointEnd} from 'unist-util-position'
 
 const own = {}.hasOwnProperty
 
+const url = 'https://github.com/retextjs/retext-profanities#readme'
+
 /**
  * @param {Config} config
  */
@@ -80,7 +82,7 @@ export function factory(config) {
             },
             [source, phrase.replace(/\W+/g, '-')].join(':')
           ),
-          {profanitySeverity, actual, expected: []}
+          {profanitySeverity, actual, expected: [], url}
         )
       }
     }
