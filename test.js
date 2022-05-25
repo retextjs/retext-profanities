@@ -4,7 +4,7 @@ import retextProfanitiesFrench from './fr.js'
 import retextProfanities from './index.js'
 
 test('profanities', (t) => {
-  t.plan(7)
+  t.plan(8)
 
   retext()
     .use(retextProfanities)
@@ -121,6 +121,17 @@ test('profanities', (t) => {
           '3:34-3:40: Reconsider using `addict`, it may be profane'
         ],
         'should warn about profanities'
+      )
+    }, t.ifErr)
+
+  retext()
+    .use(retextProfanities)
+    .process(["who're", 'who’re', 'whore'].join('\n'))
+    .then((file) => {
+      t.deepEqual(
+        file.messages.map((d) => String(d)),
+        ['3:1-3:6: Don’t use `whore`, it’s profane'],
+        'should not warn about `who are` contractions'
       )
     }, t.ifErr)
 })

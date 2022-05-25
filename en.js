@@ -20,7 +20,7 @@ const retextProfanitiesEn = factory({
     'fus' // Plural of `fu`.
   ],
   // List of values not to normalize.
-  regular: ['hell']
+  regular: ['hell', 'whore']
 })
 
 export default retextProfanitiesEn
