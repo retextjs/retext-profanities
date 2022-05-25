@@ -13,7 +13,7 @@ const own = {}.hasOwnProperty
 export default function table() {
   return (tree) => {
     headingRange(tree, 'list of rules', (start, _, end) => {
-      /** @type {TableContent[]} */
+      /** @type {Array<TableContent>} */
       const rows = [
         u('tableRow', [
           u('tableCell', [u('text', 'id')]),

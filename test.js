@@ -41,7 +41,7 @@ test('profanities', (t) => {
     .process('Merde!')
     .then((file) => {
       t.deepEqual(
-        file.messages.map((d) => String(d)),
+        file.messages.map(String),
         ['1:1-1:6: Don’t use `Merde`, it’s profane'],
         'should support other languages'
       )
@@ -58,7 +58,7 @@ test('profanities', (t) => {
     )
     .then((file) => {
       t.deepEqual(
-        file.messages.map((d) => String(d)),
+        file.messages.map(String),
         [
           '1:33-1:37: Be careful with `butt`, it’s profane in some cases',
           '2:9-2:15: Don’t use `asshat`, it’s profane',
@@ -73,7 +73,7 @@ test('profanities', (t) => {
     .process('He’s pretty set on beating your butt for sheriff.')
     .then((file) => {
       t.deepEqual(
-        file.messages.map((d) => String(d)),
+        file.messages.map(String),
         [],
         'should not warn for `ignore`d phrases'
       )
@@ -84,7 +84,7 @@ test('profanities', (t) => {
     .process('When he’ll freeze over, hell freezes over.')
     .then((file) => {
       t.deepEqual(
-        file.messages.map((d) => String(d)),
+        file.messages.map(String),
         ['1:25-1:29: Be careful with `hell`, it’s profane in some cases'],
         'should correctly depend on apostrophes'
       )
@@ -95,7 +95,7 @@ test('profanities', (t) => {
     .process('slave slaves')
     .then((file) => {
       t.deepEqual(
-        file.messages.map((d) => String(d)),
+        file.messages.map(String),
         [
           '1:1-1:6: Don’t use `slave`, it’s profane',
           '1:7-1:13: Don’t use `slaves`, it’s profane'
@@ -115,7 +115,7 @@ test('profanities', (t) => {
     )
     .then((file) => {
       t.deepEqual(
-        file.messages.map((d) => String(d)),
+        file.messages.map(String),
         [
           '2:9-2:15: Don’t use `asshat`, it’s profane',
           '3:34-3:40: Reconsider using `addict`, it may be profane'
@@ -129,7 +129,7 @@ test('profanities', (t) => {
     .process(["who're", 'who’re', 'whore'].join('\n'))
     .then((file) => {
       t.deepEqual(
-        file.messages.map((d) => String(d)),
+        file.messages.map(String),
         ['3:1-3:6: Don’t use `whore`, it’s profane'],
         'should not warn about `who are` contractions'
       )

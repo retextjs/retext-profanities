@@ -5,12 +5,12 @@
  * @property {string} lang
  * @property {Record<string, number>} cuss
  * @property {{singular: (word: string) => string, plural: (word: string) => string}} [pluralize]
- * @property {string[]} [ignorePluralize]
- * @property {string[]} [regular]
+ * @property {Array<string>} [ignorePluralize]
+ * @property {Array<string>} [regular]
  *
  * @typedef Options
  *   Configuration.
- * @property {string[]} [ignore]
+ * @property {Array<string>} [ignore]
  *   Phrases *not* to warn about.
  * @property {0|1|2} [sureness=0]
  *   Minimum *sureness* to warn about, see `cuss`.

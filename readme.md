@@ -74,7 +74,7 @@ Uses [`cuss`][cuss] for sureness.
 
 ###### `options.ignore`
 
-Phrases *not* to warn about (`Array.<string>`, default: `[]`).
+Phrases *not* to warn about (`Array<string>`, default: `[]`).
 
 ###### `options.sureness`
 
