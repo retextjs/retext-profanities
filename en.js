@@ -15,6 +15,7 @@ const retextProfanitiesEn = factory({
     'children',
     'dy', // Singular of `dies`.
     'pro', // Singular of `pros`.
+    'remain', // Singular of `remains`
     'so', // Singular of `sos`.
     'dice', // Plural of `die`.
     'fus' // Plural of `fu`.

@@ -121,4 +121,14 @@ test('profanities', async () => {
     ['3:1-3:6: Don’t use `whore`, it’s profane'],
     'should not warn about `who are` contractions'
   )
+
+  const remain = await retext()
+    .use(retextProfanities)
+    .process('Only two minutes still remain in the game.')
+
+  assert.deepEqual(
+    remain.messages.map(String),
+    [],
+    'should not warn about `remain`'
+  )
 })
