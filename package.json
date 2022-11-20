@@ -1,6 +1,6 @@
 {
   "name": "retext-profanities",
-  "version": "7.2.1",
+  "version": "7.2.2",
   "description": "retext plugin to check for profane and vulgar wording",
   "license": "MIT",
   "keywords": [
