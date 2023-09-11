@@ -11,18 +11,18 @@ test('profanities', async () => {
     JSON.parse(JSON.stringify(file.messages)),
     [
       {
-        name: '1:1-1:5',
-        message: 'Don’t use `Shit`, it’s profane',
-        reason: 'Don’t use `Shit`, it’s profane',
-        line: 1,
         column: 1,
-        source: 'retext-profanities',
-        ruleId: 'shit',
-        position: {
+        fatal: false,
+        message: 'Don’t use `Shit`, it’s profane',
+        line: 1,
+        name: '1:1-1:5',
+        place: {
           start: {line: 1, column: 1, offset: 0},
           end: {line: 1, column: 5, offset: 4}
         },
-        fatal: false,
+        reason: 'Don’t use `Shit`, it’s profane',
+        ruleId: 'shit',
+        source: 'retext-profanities',
         profanitySeverity: 2,
         actual: 'Shit',
         expected: [],

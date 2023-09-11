@@ -50,7 +50,7 @@ export function factory(config) {
 
     return (tree, file) => {
       search(tree, normals, handle)
-      search(tree, literals, handle, true)
+      search(tree, literals, handle, {allowApostrophes: true})
 
       /** @type {import('nlcst-search').Handler} */
       function handle(match, _, _1, phrase) {
@@ -60,6 +60,9 @@ export function factory(config) {
         if (profanitySeverity < sureness) {
           return
         }
+
+        const start = pointStart(match[0])
+        const end = pointEnd(match[match.length - 1])
 
         Object.assign(
           file.message(
@@ -77,10 +80,11 @@ export function factory(config) {
                 : 'it’s profane'
             ].join(' '),
             {
-              start: pointStart(match[0]),
-              end: pointEnd(match[match.length - 1])
-            },
-            [source, phrase.replace(/\W+/g, '-')].join(':')
+              /* c8 ignore next -- verbose to test */
+              place: start && end ? {start, end} : undefined,
+              ruleId: phrase.replace(/\W+/g, '-'),
+              source
+            }
           ),
           {profanitySeverity, actual, expected: [], url}
         )
