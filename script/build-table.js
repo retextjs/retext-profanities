@@ -3,16 +3,25 @@
  * @typedef {import('mdast').TableContent} TableContent
  */
 
+import {cuss} from 'cuss'
 import {headingRange} from 'mdast-util-heading-range'
 import {u} from 'unist-builder'
-import {cuss} from 'cuss'
 
-const own = {}.hasOwnProperty
-
-/** @type {import('unified').Plugin<[], Root>} */
+/**
+ * @returns
+ *   Transform.
+ */
 export default function table() {
-  return (tree) => {
-    headingRange(tree, 'list of rules', (start, _, end) => {
+  /**
+   * Transform.
+   *
+   * @param {Root} tree
+   *   Tree.
+   * @returns {undefined}
+   *   Nothing.
+   */
+  return function (tree) {
+    headingRange(tree, 'list of rules', function (start, _, end) {
       /** @type {Array<TableContent>} */
       const rows = [
         u('tableRow', [
@@ -25,7 +34,7 @@ export default function table() {
       let phrase
 
       for (phrase in cuss) {
-        if (own.call(cuss, phrase)) {
+        if (Object.hasOwn(cuss, phrase)) {
           rows.push(
             u('tableRow', [
               u('tableCell', [u('inlineCode', phrase.replace(/\W+/g, '-'))]),

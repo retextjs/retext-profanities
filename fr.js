@@ -5,6 +5,6 @@
 import {cuss} from 'cuss/fr.js'
 import {factory} from './factory.js'
 
-const retextProfanitiesFr = factory({lang: 'fr', cuss})
+const retextProfanitiesFr = factory({cuss, lang: 'fr'})
 
 export default retextProfanitiesFr

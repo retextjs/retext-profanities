@@ -7,9 +7,7 @@ import pluralize from 'pluralize'
 import {factory} from './factory.js'
 
 const retextProfanitiesEn = factory({
-  lang: 'en',
   cuss,
-  pluralize,
   // Misclassified singulars and plurals.
   ignorePluralize: [
     'children',
@@ -20,6 +18,8 @@ const retextProfanitiesEn = factory({
     'dice', // Plural of `die`.
     'fus' // Plural of `fu`.
   ],
+  lang: 'en',
+  pluralize,
   // List of values not to normalize.
   regular: ['hell', 'whore']
 })

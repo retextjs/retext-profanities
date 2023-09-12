@@ -5,6 +5,6 @@
 import {cuss} from 'cuss/ar-latn.js'
 import {factory} from './factory.js'
 
-const retextProfanitiesArLatn = factory({lang: 'ar-latn', cuss})
+const retextProfanitiesArLatn = factory({cuss, lang: 'ar-latn'})
 
 export default retextProfanitiesArLatn
