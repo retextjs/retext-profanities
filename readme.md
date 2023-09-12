@@ -50,14 +50,14 @@ npm install retext-profanities
 In Deno with [`esm.sh`][esmsh]:
 
 ```js
-import retextProfanities from 'https://esm.sh/retext-profanities@7'
+import retextProfanities from 'https://esm.sh/retext-profanities@8'
 ```
 
 In browsers with [`esm.sh`][esmsh]:
 
 ```html
 <script type="module">
-  import retextProfanities from 'https://esm.sh/retext-profanities@7?bundle'
+  import retextProfanities from 'https://esm.sh/retext-profanities@8?bundle'
 </script>
 ```
 
