@@ -30,25 +30,17 @@
   ],
   "sideEffects": false,
   "type": "module",
-  "main": "index.js",
-  "types": "index.d.ts",
+  "exports": {
+    "./ar-latn": "./lib/ar-latn.js",
+    "./en": "./lib/en.js",
+    "./es": "./lib/es.js",
+    "./fr": "./lib/fr.js",
+    "./it": "./lib/it.js",
+    "./pt": "./lib/pt.js",
+    ".": "./lib/en.js"
+  },
   "files": [
-    "ar-latn.d.ts",
-    "ar-latn.js",
-    "en.d.ts",
-    "en.js",
-    "es.d.ts",
-    "es.js",
-    "factory.d.ts",
-    "factory.js",
-    "fr.d.ts",
-    "fr.js",
-    "index.d.ts",
-    "index.js",
-    "it.d.ts",
-    "it.js",
-    "pt.d.ts",
-    "pt.js"
+    "lib/"
   ],
   "dependencies": {
     "@types/nlcst": "^2.0.0",
@@ -116,6 +108,7 @@
   "xo": {
     "prettier": true,
     "rules": {
+      "n/file-extension-in-import": "off",
       "unicorn/prefer-at": "off",
       "unicorn/prefer-string-replace-all": "off"
     }
