@@ -108,6 +108,7 @@ languages:
 *   `retext-profanities/fr` — French
 *   `retext-profanities/it` — Italian
 *   `retext-profanities/pt` — Portuguese
+*   `retext-profanities/pt-pt` — Portuguese (Portugal)
 *   `retext-profanities` — English
 
 Each module exports the plugin [`retextProfanities`][api-retext-profanities] as

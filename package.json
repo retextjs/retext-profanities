@@ -37,6 +37,7 @@
     "./fr": "./lib/fr.js",
     "./it": "./lib/it.js",
     "./pt": "./lib/pt.js",
+    "./pt-pt": "./lib/pt-pt.js",
     ".": "./lib/en.js"
   },
   "files": [
