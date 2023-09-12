@@ -8,7 +8,7 @@
 [![Backers][backers-badge]][collective]
 [![Chat][chat-badge]][chat]
 
-**[retext][]** plugin to check for possible profane and vulgar wording.
+**[retext][]** plugin to check for potential bad words.
 
 ## Contents
 
@@ -18,7 +18,8 @@
 *   [Use](#use)
 *   [API](#api)
     *   [`unified().use(retextProfanities[, options])`](#unifieduseretextprofanities-options)
-*   [Rules](#rules)
+    *   [`Options`](#options)
+*   [Data](#data)
 *   [Messages](#messages)
 *   [Types](#types)
 *   [Compatibility](#compatibility)
@@ -29,18 +30,18 @@
 ## What is this?
 
 This package is a [unified][] ([retext][]) plugin to check for possible
-[profane or otherwise vulgar][profanities] wording, in certain contexts.
+[profane or otherwise vulgar][profanities] wording.
 It uses [`cuss`][cuss] for sureness.
 
 ## When should I use this?
 
-You can opt-into this plugin when you’re dealing with your own text and want to
+You can use this plugin when you’re dealing with your own text and want to
 check for potential mistakes.
 
 ## Install
 
 This package is [ESM only][esm].
-In Node.js (version 14.14+, 16.0+), install with [npm][]:
+In Node.js (version 16+), install with [npm][]:
 
 ```sh
 npm install retext-profanities
@@ -68,15 +69,15 @@ Say our document `example.txt` contains:
 He’s pretty set on beating your butt for sheriff.
 ```
 
-…and our module `example.js` looks as follows:
+…and our module `example.js` contains:
 
 ```js
-import {read} from 'to-vfile'
-import {reporter} from 'vfile-reporter'
-import {unified} from 'unified'
 import retextEnglish from 'retext-english'
 import retextProfanities from 'retext-profanities'
 import retextStringify from 'retext-stringify'
+import {read} from 'to-vfile'
+import {unified} from 'unified'
+import {reporter} from 'vfile-reporter'
 
 const file = await unified()
   .use(retextEnglish)
@@ -87,84 +88,80 @@ const file = await unified()
 console.error(reporter(file))
 ```
 
-…now running `node example.js` yields:
+…then running `node example.js` yields:
 
 ```txt
 example.txt
-  1:33-1:37  warning  Be careful with “butt”, it’s profane in some cases  butt  retext-profanities
+1:33-1:37 warning Be careful with `butt`, it’s profane in some cases butt retext-profanities
 
 ⚠ 1 warning
 ```
 
 ## API
 
-This package exports no identifiers.
-The default export is `retextProfanities`.
+This package has an export map with several entries for plugins in different
+languages:
+
+*   `retext-profanities/ar-latn` — Arabic (Latin-script)
+*   `retext-profanities/en` — English
+*   `retext-profanities/es` — Spanish
+*   `retext-profanities/fr` — French
+*   `retext-profanities/it` — Italian
+*   `retext-profanities/pt` — Portuguese
+*   `retext-profanities` — English
+
+Each module exports the plugin [`retextProfanities`][api-retext-profanities] as
+the default export.
 
 ### `unified().use(retextProfanities[, options])`
 
-Check for possible profane and vulgar wording.
+Check for potential bad words.
 
-##### `options`
+###### Parameters
 
-Configuration (optional).
+*   `options` ([`Options`][api-options], optional)
+    — configuration
 
-###### `options.ignore`
+###### Returns
 
-Phrases *not* to warn about (`Array<string>`, default: `[]`).
+Transform ([`Transformer`][unified-transformer]).
 
-###### `options.sureness`
+### `Options`
 
-Minimum *sureness* to warn about, see [`cuss`][cuss] (`number`, default: `0`).
+Configuration (TypeScript type).
 
-## Rules
+###### Fields
 
-See [`rules.md`][rules] for a list of rules.
+*   `ignore` (`Array<string>`, optional)
+    — phrases *not* to warn about
+*   `sureness` (`0`, `1`, or `2`, default: `0`)
+    — minimum *sureness* to warn about, see [`cuss`][cuss]
 
-Note that Latin-script Arabic (`retext-profanities/ar-latn`), French
-(`retext-profanities/fr`), Spanish (`retext-profanities/es`), Italian
-(`retext-profanities/it`), and Portuguese (Brazilian) (`retext-profanities/pt`)
-are also supported.
+## Data
+
+See [`cuss`][cuss].
 
 ## Messages
 
-See [`rules.md`][rules] for a list of rules and how rules work.
-
-Each message is emitted as a [`VFileMessage`][vfile-message] on `file`, with
-the following fields:
-
-###### `message.source`
-
-Name of this plugin (`'retext-profanities'`).
-
-###### `message.ruleId`
-
-See `id` in [`rules.md`][rules].
-
-###### `message.profanitySeverity`
-
-[Cuss][] sureness (`number`).
-
-###### `message.actual`
-
-Profane phrase (`string`).
-
-###### `message.expected`
-
-Empty array to signal that `actual` should be removed or changed (`[]`).
+Each message is emitted as a [`VFileMessage`][vfile-message], with `source` set
+to `'retext-profanities'`, `ruleId` to the normalized phrase, `actual` to the
+potential bad word, `expected` to an empty array, and `profanitySeverity` to
+the `cuss` severity of the phrase.
 
 ## Types
 
 This package is fully typed with [TypeScript][].
-It exports the additional type `Options`.
+It exports the additional type [`Options`][api-options].
 
 ## Compatibility
 
-Projects maintained by the unified collective are compatible with all maintained
+Projects maintained by the unified collective are compatible with maintained
 versions of Node.js.
-As of now, that is Node.js 14.14+ and 16.0+.
-Our projects sometimes work with older versions, but this is not guaranteed.
-It also works in Deno and modern browsers.
+
+When we cut a new major release, we drop support for unmaintained versions of
+Node.
+This means we try to keep the current release line, `retext-profanities@^7`,
+compatible with Node.js 12.
 
 ## Related
 
@@ -203,9 +200,9 @@ abide by its terms.
 
 [downloads]: https://www.npmjs.com/package/retext-profanities
 
-[size-badge]: https://img.shields.io/bundlephobia/minzip/retext-profanities.svg
+[size-badge]: https://img.shields.io/bundlejs/size/retext-profanities
 
-[size]: https://bundlephobia.com/result?p=retext-profanities
+[size]: https://bundlejs.com/?q=retext-profanities
 
 [sponsors-badge]: https://opencollective.com/unified/sponsors/badge.svg
 
@@ -237,14 +234,18 @@ abide by its terms.
 
 [author]: https://wooorm.com
 
-[unified]: https://github.com/unifiedjs/unified
-
-[retext]: https://github.com/retextjs/retext
-
-[vfile-message]: https://github.com/vfile/vfile-message
+[cuss]: https://github.com/words/cuss
 
 [profanities]: https://github.com/words/profanities
 
-[cuss]: https://github.com/words/cuss
+[retext]: https://github.com/retextjs/retext
 
-[rules]: rules.md
+[unified]: https://github.com/unifiedjs/unified
+
+[unified-transformer]: https://github.com/unifiedjs/unified#transformer
+
+[vfile-message]: https://github.com/vfile/vfile-message
+
+[api-retext-profanities]: #unifieduseretextprofanities-options
+
+[api-options]: #options
